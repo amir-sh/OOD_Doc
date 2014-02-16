@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{813C58EF-D2E8-4DC5-8F1D-5D169EF23CEC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="forms\barchasb\BarchasbListViewe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\barchasb\BarchasbListViewe.Designer.cs">
+      <DependentUpon>BarchasbListViewe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\barchasb\BarchasbViewe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\barchasb\BarchasbViewe.Designer.cs">
+      <DependentUpon>BarchasbViewe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\barchasb\ComplexBarchasbManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\barchasb\ComplexBarchasbManagement.Designer.cs">
+      <DependentUpon>ComplexBarchasbManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\barchasb\CreateBarchasb.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\barchasb\CreateBarchasb.Designer.cs">
+      <DependentUpon>CreateBarchasb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\barchasb\RemoveBarchasb.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\barchasb\RemoveBarchasb.Designer.cs">
+      <DependentUpon>RemoveBarchasb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\barchasb\UpdateBarchasb.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\barchasb\UpdateBarchasb.Designer.cs">
+      <DependentUpon>UpdateBarchasb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\change\ChangeBarchasb.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\change\ChangeBarchasb.Designer.cs">
+      <DependentUpon>ChangeBarchasb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\darayi\ComplexDarayiManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\darayi\ComplexDarayiManagement.Designer.cs">
+      <DependentUpon>ComplexDarayiManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\darayi\CreateDarayiPhase1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\darayi\CreateDarayiPhase1.Designer.cs">
+      <DependentUpon>CreateDarayiPhase1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\darayi\CreateDarayiPhase2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\darayi\CreateDarayiPhase2.Designer.cs">
+      <DependentUpon>CreateDarayiPhase2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\darayi\CreateDarayiPhase3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\darayi\CreateDarayiPhase3.Designer.cs">
+      <DependentUpon>CreateDarayiPhase3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\darayi\CreateDarayiPhase4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\darayi\CreateDarayiPhase4.Designer.cs">
+      <DependentUpon>CreateDarayiPhase4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\darayi\DarayiListViewe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\darayi\DarayiListViewe.Designer.cs">
+      <DependentUpon>DarayiListViewe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\darayi\DarayiViewe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\darayi\DarayiViewe.Designer.cs">
+      <DependentUpon>DarayiViewe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\darayi\RemoveDarayi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\darayi\RemoveDarayi.Designer.cs">
+      <DependentUpon>RemoveDarayi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\darayi\UpdateDarayiPhase1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\darayi\UpdateDarayiPhase1.Designer.cs">
+      <DependentUpon>UpdateDarayiPhase1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\darayi\UpdateDarayiPhase2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\darayi\UpdateDarayiPhase2.Designer.cs">
+      <DependentUpon>UpdateDarayiPhase2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\darayi\UpdateDarayiPhase3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\darayi\UpdateDarayiPhase3.Designer.cs">
+      <DependentUpon>UpdateDarayiPhase3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\darayi\UpdateDarayiPhase4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\darayi\UpdateDarayiPhase4.Designer.cs">
+      <DependentUpon>UpdateDarayiPhase4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\elsagh\ManageElsaghs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\elsagh\ManageElsaghs.Designer.cs">
+      <DependentUpon>ManageElsaghs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\events\DefineEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\events\DefineEvent.Designer.cs">
+      <DependentUpon>DefineEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\events\ManageEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\events\ManageEvent.Designer.cs">
+      <DependentUpon>ManageEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\events\RunEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\events\RunEvent.Designer.cs">
+      <DependentUpon>RunEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\function\AddFunction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\function\AddFunction.Designer.cs">
+      <DependentUpon>AddFunction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\function\ApplyFunction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\function\ApplyFunction.Designer.cs">
+      <DependentUpon>ApplyFunction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\function\RemoveFunction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\function\RemoveFunction.Designer.cs">
+      <DependentUpon>RemoveFunction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\function\UpdateFunction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\function\UpdateFunction.Designer.cs">
+      <DependentUpon>UpdateFunction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\history\BaseHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\history\BaseHistory.Designer.cs">
+      <DependentUpon>BaseHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\history\HistoryManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\history\HistoryManagement.Designer.cs">
+      <DependentUpon>HistoryManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\report\ReportBarchasb.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\report\ReportBarchasb.Designer.cs">
+      <DependentUpon>ReportBarchasb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\report\ReportDarayi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\report\ReportDarayi.Designer.cs">
+      <DependentUpon>ReportDarayi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\report\ReportFunction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\report\ReportFunction.Designer.cs">
+      <DependentUpon>ReportFunction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\report\ReportTimeSerries.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\report\ReportTimeSerries.Designer.cs">
+      <DependentUpon>ReportTimeSerries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\settings\ConfigBarchasbTimeSerries.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\settings\ConfigBarchasbTimeSerries.Designer.cs">
+      <DependentUpon>ConfigBarchasbTimeSerries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\settings\ConfigDarayiTimeSerries.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\settings\ConfigDarayiTimeSerries.Designer.cs">
+      <DependentUpon>ConfigDarayiTimeSerries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\settings\Passwords.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\settings\Passwords.Designer.cs">
+      <DependentUpon>Passwords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="forms\barchasb\BarchasbListViewe.resx">
+      <DependentUpon>BarchasbListViewe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\barchasb\BarchasbViewe.resx">
+      <DependentUpon>BarchasbViewe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\barchasb\ComplexBarchasbManagement.resx">
+      <DependentUpon>ComplexBarchasbManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\barchasb\CreateBarchasb.resx">
+      <DependentUpon>CreateBarchasb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\barchasb\RemoveBarchasb.resx">
+      <DependentUpon>RemoveBarchasb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\barchasb\UpdateBarchasb.resx">
+      <DependentUpon>UpdateBarchasb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\change\ChangeBarchasb.resx">
+      <DependentUpon>ChangeBarchasb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\darayi\ComplexDarayiManagement.resx">
+      <DependentUpon>ComplexDarayiManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\darayi\CreateDarayiPhase1.resx">
+      <DependentUpon>CreateDarayiPhase1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\darayi\CreateDarayiPhase2.resx">
+      <DependentUpon>CreateDarayiPhase2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\darayi\CreateDarayiPhase3.resx">
+      <DependentUpon>CreateDarayiPhase3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\darayi\CreateDarayiPhase4.resx">
+      <DependentUpon>CreateDarayiPhase4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\darayi\DarayiListViewe.resx">
+      <DependentUpon>DarayiListViewe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\darayi\DarayiViewe.resx">
+      <DependentUpon>DarayiViewe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\darayi\RemoveDarayi.resx">
+      <DependentUpon>RemoveDarayi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\darayi\UpdateDarayiPhase1.resx">
+      <DependentUpon>UpdateDarayiPhase1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\darayi\UpdateDarayiPhase2.resx">
+      <DependentUpon>UpdateDarayiPhase2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\darayi\UpdateDarayiPhase3.resx">
+      <DependentUpon>UpdateDarayiPhase3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\darayi\UpdateDarayiPhase4.resx">
+      <DependentUpon>UpdateDarayiPhase4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\elsagh\ManageElsaghs.resx">
+      <DependentUpon>ManageElsaghs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\events\DefineEvent.resx">
+      <DependentUpon>DefineEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\events\ManageEvent.resx">
+      <DependentUpon>ManageEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\events\RunEvent.resx">
+      <DependentUpon>RunEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\function\AddFunction.resx">
+      <DependentUpon>AddFunction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\function\ApplyFunction.resx">
+      <DependentUpon>ApplyFunction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\function\RemoveFunction.resx">
+      <DependentUpon>RemoveFunction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\function\UpdateFunction.resx">
+      <DependentUpon>UpdateFunction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\history\BaseHistory.resx">
+      <DependentUpon>BaseHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\history\HistoryManagement.resx">
+      <DependentUpon>HistoryManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\report\ReportBarchasb.resx">
+      <DependentUpon>ReportBarchasb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\report\ReportDarayi.resx">
+      <DependentUpon>ReportDarayi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\report\ReportFunction.resx">
+      <DependentUpon>ReportFunction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\report\ReportTimeSerries.resx">
+      <DependentUpon>ReportTimeSerries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\settings\ConfigBarchasbTimeSerries.resx">
+      <DependentUpon>ConfigBarchasbTimeSerries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\settings\ConfigDarayiTimeSerries.resx">
+      <DependentUpon>ConfigDarayiTimeSerries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\settings\Passwords.resx">
+      <DependentUpon>Passwords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
