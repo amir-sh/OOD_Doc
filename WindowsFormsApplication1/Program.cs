@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication1.Model;
 
 namespace WindowsFormsApplication1
 {
@@ -14,6 +16,7 @@ namespace WindowsFormsApplication1
         [STAThread]
         static void Main()
         {
+            DatabaseContext db = new DatabaseContext();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
