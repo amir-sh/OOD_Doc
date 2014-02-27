@@ -470,6 +470,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="extras\IMG_20140218_164106.jpg" />
+    <Content Include="extras\IMG_20140218_164133.jpg" />
     <Content Include="extras\test.txt" />
   </ItemGroup>
   <ItemGroup>
