@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="extras\DatabaseInitializer.cs" />
+    <Compile Include="extras\DataManager.cs" />
+    <Compile Include="extras\OodContext.cs" />
     <Compile Include="forms\barchasb\BarchasbListViewe.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -390,6 +393,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="extras\Amir Sharif.vpp" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
