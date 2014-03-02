@@ -77,9 +77,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="extras\DatabaseInitializer.cs" />
-    <Compile Include="extras\DataManager.cs" />
-    <Compile Include="extras\OodContext.cs" />
     <Compile Include="forms\barchasb\BarchasbListViewe.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -303,12 +300,29 @@
       <DependentUpon>Passwords.cs</DependentUpon>
     </Compile>
     <Compile Include="model\asset\Asset.cs" />
-    <Compile Include="model\asset\Feature.cs" />
+    <Compile Include="model\asset\AssetManager.cs" />
+    <Compile Include="model\asset\attachment\File.cs" />
+    <Compile Include="model\asset\FeatureThing.cs" />
     <Compile Include="model\DatabaseContext.cs" />
-    <Compile Include="model\Function.cs" />
+    <Compile Include="model\label\autoUpdate\CompilerPlugin.cs" />
+    <Compile Include="model\label\autoUpdate\PluginCode.cs" />
+    <Compile Include="model\label\autoUpdate\Translator.cs" />
     <Compile Include="model\label\Label.cs" />
-    <Compile Include="model\label\LabelInstance.cs" />
+    <Compile Include="model\label\AssignedLabel.cs" />
+    <Compile Include="model\label\LabelManager.cs" />
+    <Compile Include="model\maintenance\date\Notifier.cs" />
+    <Compile Include="model\maintenance\date\Time.cs" />
+    <Compile Include="model\maintenance\function\Action.cs" />
+    <Compile Include="model\maintenance\function\GeneralAction.cs" />
+    <Compile Include="model\maintenance\function\ActionManager.cs" />
+    <Compile Include="model\maintenance\History.cs" />
+    <Compile Include="model\maintenance\occurrence\Event.cs" />
+    <Compile Include="model\maintenance\occurrence\EventManager.cs" />
+    <Compile Include="model\management\Configuration.cs" />
     <Compile Include="model\util\Thing.cs" />
+    <Compile Include="model\validation\Constraint.cs" />
+    <Compile Include="model\validation\ConstraintManager.cs" />
+    <Compile Include="model\validation\Relation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="forms\barchasb\BarchasbListViewe.resx">
@@ -475,7 +489,8 @@
     <Content Include="extras\test.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="model\management\" />
+    <Folder Include="model\authentication\" />
+    <Folder Include="model\management\report\" />
     <Folder Include="model\report\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

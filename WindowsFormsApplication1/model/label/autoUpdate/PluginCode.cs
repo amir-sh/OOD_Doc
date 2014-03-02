@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApplication1.Model
+namespace WindowsFormsApplication1.model.label.autoUpdate
 {
-    class Function
+    class PluginCode
     {
+        public int id { get; set; }
     }
 }

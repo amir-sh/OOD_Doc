@@ -5,11 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApplication1.model.label
+namespace WindowsFormsApplication1.model.maintenance.function
 {
-    public class LabelInstance
+    class ActionManager
     {
         [Key]
         public int id { get; set; }
+        public ICollection<GeneralAction> actions { get; set; }
     }
 }

@@ -19,6 +19,7 @@ using WindowsFormsApplication1.forms.events;
 using WindowsFormsApplication1.forms.change;
 using WindowsFormsApplication1.Model;
 using System.Data.Common;
+using WindowsFormsApplication1.model.asset;
 
 namespace WindowsFormsApplication1
 {
@@ -69,7 +70,13 @@ namespace WindowsFormsApplication1
 
         private void خروجToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DatabaseContext db = new DatabaseContext();
+            Asset asset=new Asset();
+            asset.name = "salam";
+            asset.date = DateTime.Now;
+            db.Assets.Add(asset);
+            db.SaveChanges();
+            //Application.Exit();
 
         }
 

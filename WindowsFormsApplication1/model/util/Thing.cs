@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1.model.util
 {
-    public class Thing
+    class Thing
     {
         const int NUM_CONNECTED=1;
         const int NUM_DISCERETE=2;

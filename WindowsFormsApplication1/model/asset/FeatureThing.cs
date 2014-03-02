@@ -8,7 +8,7 @@ using WindowsFormsApplication1.Model;
 
 namespace WindowsFormsApplication1.model.asset
 {
-    public class Feature
+    class FeatureThing
     {
         [Key]
         public int id { get; set; }
