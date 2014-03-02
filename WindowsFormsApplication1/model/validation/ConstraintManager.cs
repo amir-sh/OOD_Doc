@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1.model.validation
 {
-    class ConstraintManager
+    public class ConstraintManager
     {
     }
 }

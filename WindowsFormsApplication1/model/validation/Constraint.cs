@@ -12,8 +12,8 @@ namespace WindowsFormsApplication1.model.validation
     {
         [Key]
         public int id { get; set; }
-        public Thing thing1 { get; set; }
-        public Thing thing2 { get; set; }
+        public ICollection<Constthing> thing1 { get; set; }
+        public ICollection<Constthing> thing2 { get; set; }
         public Relation relation { get; set; }
     }
 }

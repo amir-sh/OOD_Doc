@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApplication1.Model;
+using WindowsFormsApplication1.model;
 
 namespace WindowsFormsApplication1
 {

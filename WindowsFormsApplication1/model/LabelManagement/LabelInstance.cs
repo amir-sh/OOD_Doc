@@ -5,10 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApplication1.model.maintenance.occurrence
+namespace WindowsFormsApplication1.Model.LabelManagement
 {
-    public class EventManager
+    public class LabelInstance
     {
-       
+        [Key]
+        public int id { get; set; }
+
     }
 }

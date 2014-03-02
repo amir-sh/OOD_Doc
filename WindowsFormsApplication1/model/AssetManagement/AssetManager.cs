@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApplication1.model.label.autoUpdate
+namespace WindowsFormsApplication1.Model.AssetManagement
 {
-    class PluginCode
+    class AssetManager
     {
-        public int id { get; set; }
     }
 }

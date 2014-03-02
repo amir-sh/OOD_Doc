@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1.model.asset
 {
-    class AssetManager
-    {
-        [Key]
-        public int id { get; set; }
-        public ICollection<Asset> assets { get; set; }
+    public class AssetManager 
+    { 
     }
+   
 }

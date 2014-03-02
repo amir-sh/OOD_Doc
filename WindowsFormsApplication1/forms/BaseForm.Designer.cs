@@ -1,5 +1,5 @@
 ﻿using System;
-using WindowsFormsApplication1.Model;
+using WindowsFormsApplication1.model;
 namespace WindowsFormsApplication1
 {
     partial class Form1
