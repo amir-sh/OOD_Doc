@@ -7,12 +7,12 @@ using WindowsFormsApplication1.model.maintenance.function;
 
 namespace WindowsFormsApplication1.model.maintenance.occurrence
 {
-    class Event
+    public class Event
     {
         [Key]
         public int id { get; set; }
         public string name { get; set; }
-        public GeneralAction action { get; set; }
+        public Action action { get; set; }
         public string description { get; set; }
     }
 }

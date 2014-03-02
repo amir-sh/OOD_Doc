@@ -11,18 +11,16 @@ using WindowsFormsApplication1.model.validation;
 
 namespace WindowsFormsApplication1.model.label
 {
-    class Label
+    public class Label
     {
         [Key]
         public int id { get; set; }
         public string name { get; set; }
         public ICollection<Label> subLabels { get; set; }
         public ICollection<Label> parents { get; set; }
-        public PluginCode code { get; set; }
+        
         public ICollection<AssignedLabel> instanceLabels { get; set; }
         public DateTime date { get; set; }
-        public ICollection<History> history { get; set; }
-        public Thing value { get; set; }
         public ICollection<Constraint> constraints { get; set; }
     }
 }

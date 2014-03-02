@@ -7,11 +7,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1.model.label
 {
-    class LabelManager
+    public class LabelManager 
     {
-        [Key]
-        public int id { get; set; }
-        public ICollection<Label> labels { get; set; }
-        public string attribute { get; set; }
     }
 }

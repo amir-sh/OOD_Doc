@@ -8,12 +8,9 @@ using WindowsFormsApplication1.model.util;
 
 namespace WindowsFormsApplication1.model.validation
 {
-    class Relation
+    public class Relation
     {
-        [Key]
-        public int id { get; set; }
-        public ICollection<Thing> thing1 { get; set; }
-        public ICollection<Thing> thing2 { get; set; }
-        public int type { get; set; }
+
+        public bool apply(int type, Constraint input);
     }
 }

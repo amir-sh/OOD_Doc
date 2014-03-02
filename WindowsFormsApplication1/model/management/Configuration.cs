@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1.model.management
 {
-    class Configuration
+    public class Configuration
     {
         [Key]
         public int id { get; set; }

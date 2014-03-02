@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1.model.maintenance.function
 {
-    class ActionManager
+    public class ActionManager
     {
-        [Key]
-        public int id { get; set; }
-        public ICollection<GeneralAction> actions { get; set; }
+        
     }
 }

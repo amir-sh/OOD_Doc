@@ -7,11 +7,8 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1.model.maintenance.occurrence
 {
-    class EventManager
+    public class EventManager
     {
-        [Key]
-        public int id { get; set; }
-        public ICollection<Event> events { get; set; }
-
+       
     }
 }

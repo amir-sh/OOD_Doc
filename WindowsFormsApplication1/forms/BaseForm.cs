@@ -17,7 +17,7 @@ using WindowsFormsApplication1.forms.function;
 using WindowsFormsApplication1.forms.report;
 using WindowsFormsApplication1.forms.events;
 using WindowsFormsApplication1.forms.change;
-using WindowsFormsApplication1.Model;
+using WindowsFormsApplication1.model;
 using System.Data.Common;
 using WindowsFormsApplication1.model.asset;
 
