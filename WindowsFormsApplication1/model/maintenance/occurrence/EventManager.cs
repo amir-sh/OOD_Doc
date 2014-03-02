@@ -9,6 +9,7 @@ namespace WindowsFormsApplication1.model.maintenance.occurrence
 {
     public class EventManager
     {
+        public int id { get; set; }
        
     }
 }

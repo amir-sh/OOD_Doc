@@ -24,8 +24,7 @@ namespace WindowsFormsApplication1.model.asset
         public string name { get; set; }
         public ICollection<Asset> parents { get; set; }
         public ICollection<Asset> subAssets { get; set; }
-
-        public ICollection<Feature> features { get; set; }
+        public ICollection<FeatureThing> features { get; set; }
         public ICollection<Constraint> constraints { get; set; }
         public ICollection<AssignedLabel> labels { get; set; }
         public DateTime date { get; set; }

@@ -23,18 +23,17 @@ namespace WindowsFormsApplication1.model
     {
         static DatabaseContext()
         {
+
         }
 
         public DatabaseContext()
             : base("SQLConnection")
         {
             Database.SetInitializer(new DropCreateDatabaseAlways<DatabaseContext>());
-            this.Database.Initialize(true);
-            
         }
         //Asset
         public DbSet<Asset> Assets { get; set; }
-        public DbSet<Feature> featureThings { get; set; }
+        public DbSet<FeatureThing> featureThings { get; set; }
         public DbSet<AssignedLabel> AssignedLabels { get; set; }
 
         //Label

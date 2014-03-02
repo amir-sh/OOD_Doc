@@ -9,6 +9,6 @@ namespace WindowsFormsApplication1.model.maintenance.function
 {
     public class ActionManager
     {
-        
+      
     }
 }

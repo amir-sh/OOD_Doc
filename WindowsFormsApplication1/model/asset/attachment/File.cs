@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1.model.asset.attachment
 {
-    public class File
+    class File
     {
         [Key]
         public int id { get; set; }

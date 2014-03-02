@@ -8,7 +8,7 @@ using WindowsFormsApplication1.model.util;
 
 namespace WindowsFormsApplication1.model.validation
 {
-    class Constraint
+    public class Constraint
     {
         [Key]
         public int id { get; set; }

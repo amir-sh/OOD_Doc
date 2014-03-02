@@ -11,6 +11,11 @@ namespace WindowsFormsApplication1.model.validation
     public class Relation
     {
 
-        public bool apply(int type, Constraint input);
+        [Key]
+        public int id { get; set; }
+        public bool apply(int type, Constraint input)
+        {
+            return true;
+        }
     }
 }
