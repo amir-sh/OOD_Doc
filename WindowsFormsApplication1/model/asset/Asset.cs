@@ -13,12 +13,17 @@ namespace WindowsFormsApplication1.model.asset
 {
     class Asset
     {
+        public Asset()
+        {
+            subAssets = new List<Asset>();
+        }
+        
         [Key]
         public int id { get; set; }
         public string uId { get; set; }
         public string name { get; set; }
+        public ICollection<Asset> parents { get; set; }
         public ICollection<Asset> subAssets { get; set; }
-        public Asset parent { get; set; }
         public ICollection<Constraint> constraints { get; set; }
         public ICollection<FeatureThing> features { get; set; }
         public ICollection<AssignedLabel> labels { get; set; }
