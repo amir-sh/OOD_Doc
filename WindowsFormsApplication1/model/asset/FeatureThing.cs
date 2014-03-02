@@ -13,6 +13,6 @@ namespace WindowsFormsApplication1.model.asset
         [Key]
         public int id { get; set; }
         public string name { get; set; }
-        public ConstThing value {get; set;}
+        public Constthing value {get; set;}
     }
 }
