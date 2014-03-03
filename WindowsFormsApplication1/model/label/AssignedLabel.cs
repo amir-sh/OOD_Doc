@@ -11,13 +11,18 @@ namespace WindowsFormsApplication1.model.label
 {
     public class AssignedLabel
     {
+        public AssignedLabel()
+        {
+            childrens= new List<AssignedLabel>();
+            constraints = new List<Constraint>();
+        }
         [Key]
         public int id { get; set; }
-        public Label label { get; set; }
-        public ICollection<AssignedLabel> children { get; set; }
-        public AssignedLabel Parent { get; set; }
-        public Constthing value { get; set; }
-        public ICollection<Constraint> constraints { get; set; }
+        public virtual Label label { get; set; }
+        public virtual ICollection<AssignedLabel> childrens { get; set; }
+        public virtual AssignedLabel Parent { get; set; }
+        public virtual Constthing value { get; set; }
+        public virtual ICollection<Constraint> constraints { get; set; }
 
     }
 }

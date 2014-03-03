@@ -12,7 +12,8 @@ namespace WindowsFormsApplication1.model.asset
     {
         [Key]
         public int id { get; set; }
-        public string name { get; set; }
-        public Constthing value {get; set;}
+        public virtual string name { get; set; }
+        public virtual Asset asset { get; set; }
+        public virtual Constthing value {get; set;}
     }
 }

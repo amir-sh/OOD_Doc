@@ -70,24 +70,8 @@ namespace WindowsFormsApplication1
 
         private void خروجToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DatabaseContext db = new DatabaseContext();
-            Asset asset1=new Asset();
-            asset1.name = "asset1";
-            asset1.date = DateTime.Now;
-
-            Asset asset2 = new Asset();
-            asset2.name = "asset2";
-            asset2.date = DateTime.Now;
-
-            asset1.subAssets.Add(asset2);
-            db.Assets.Add(asset1);
-            db.Assets.Add(asset2);
-            db.SaveChanges();
-
-            Console.WriteLine(asset1.subAssets.Count);
-            //Console.WriteLine(asset2.parents.Count);
             
-            //Application.Exit();
+           Application.Exit();
 
         }
 

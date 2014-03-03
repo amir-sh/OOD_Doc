@@ -10,9 +10,9 @@ namespace WindowsFormsApplication1.model.maintenance.occurrence
     public class Event
     {
         [Key]
-        public int id { get; set; }
+        public  int id { get; set; }
         public string name { get; set; }
-        public Action action { get; set; }
+        public virtual Action action { get; set; }
         public string description { get; set; }
     }
 }

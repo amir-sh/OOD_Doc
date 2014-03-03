@@ -16,18 +16,22 @@ namespace WindowsFormsApplication1.model.asset
         public Asset()
         {
             subAssets = new List<Asset>();
+            parents = new HashSet<Asset>();
+            features = new List<FeatureThing>();
+            constraints = new List<Constraint>();
+            labels = new List<AssignedLabel>();
         }
         
         [Key]
         public int id { get; set; }
         public string uId { get; set; }
         public string name { get; set; }
-        public ICollection<Asset> parents { get; set; }
-        public ICollection<Asset> subAssets { get; set; }
-        public ICollection<FeatureThing> features { get; set; }
-        public ICollection<Constraint> constraints { get; set; }
-        public ICollection<AssignedLabel> labels { get; set; }
-        public DateTime date { get; set; }
+        public virtual  ICollection<Asset> parents { get; set; }
+        public virtual ICollection<Asset> subAssets { get; set; }
+        public virtual ICollection<FeatureThing> features { get; set; }
+        public virtual ICollection<Constraint> constraints { get; set; }
+        public virtual ICollection<AssignedLabel> labels { get; set; }
+        public virtual DateTime date { get; set; }
 
     }
 }

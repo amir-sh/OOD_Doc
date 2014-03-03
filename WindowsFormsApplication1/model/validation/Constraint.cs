@@ -10,10 +10,15 @@ namespace WindowsFormsApplication1.model.validation
 {
     public class Constraint
     {
+        public Constraint()
+        {
+            thing1 = new List<Constthing>();
+            thing2 = new List<Constthing>();
+        }
         [Key]
         public int id { get; set; }
-        public ICollection<Constthing> thing1 { get; set; }
-        public ICollection<Constthing> thing2 { get; set; }
-        public Relation relation { get; set; }
+        public virtual ICollection<Constthing> thing1 { get; set; }
+        public virtual ICollection<Constthing> thing2 { get; set; }
+        public virtual Relation relation { get; set; }
     }
 }

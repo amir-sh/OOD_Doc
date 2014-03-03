@@ -15,6 +15,6 @@ namespace WindowsFormsApplication1.model.util
     {
         [Key]
         public int id {get; set;}
-        public AssignedLabel  assingnedlabel ;
+        public virtual AssignedLabel assingnedlabel { get; set; }
     }
 }
