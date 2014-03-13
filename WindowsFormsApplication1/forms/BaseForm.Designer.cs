@@ -81,6 +81,7 @@ namespace WindowsFormsApplication1
             // splitContainer1
             // 
             this.splitContainer1.Location = new System.Drawing.Point(0, -1);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -93,8 +94,9 @@ namespace WindowsFormsApplication1
             this.splitContainer1.Panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.splitContainer1.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.splitContainer1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.splitContainer1.Size = new System.Drawing.Size(1130, 632);
-            this.splitContainer1.SplitterDistance = 99;
+            this.splitContainer1.Size = new System.Drawing.Size(848, 514);
+            this.splitContainer1.SplitterDistance = 74;
+            this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 2;
             // 
             // menuStrip1
@@ -118,9 +120,10 @@ namespace WindowsFormsApplication1
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.menuStrip1.ShowItemToolTips = true;
-            this.menuStrip1.Size = new System.Drawing.Size(99, 632);
+            this.menuStrip1.Size = new System.Drawing.Size(74, 514);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -136,7 +139,7 @@ namespace WindowsFormsApplication1
             this.داراییToolStripMenuItem.Name = "داراییToolStripMenuItem";
             this.داراییToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 0);
             this.داراییToolStripMenuItem.RightToLeftAutoMirrorImage = true;
-            this.داراییToolStripMenuItem.Size = new System.Drawing.Size(95, 40);
+            this.داراییToolStripMenuItem.Size = new System.Drawing.Size(71, 35);
             this.داراییToolStripMenuItem.Text = "دارایی";
             this.داراییToolStripMenuItem.Click += new System.EventHandler(this.داراییToolStripMenuItem_Click);
             // 
@@ -144,42 +147,42 @@ namespace WindowsFormsApplication1
             // 
             this.ایجادداراییToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.ایجادداراییToolStripMenuItem.Name = "ایجادداراییToolStripMenuItem";
-            this.ایجادداراییToolStripMenuItem.Size = new System.Drawing.Size(207, 30);
+            this.ایجادداراییToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.ایجادداراییToolStripMenuItem.Text = "ایجاد دارایی";
             this.ایجادداراییToolStripMenuItem.Click += new System.EventHandler(this.ایجادداراییToolStripMenuItem_Click);
             // 
             // حذفداراییToolStripMenuItem
             // 
             this.حذفداراییToolStripMenuItem.Name = "حذفداراییToolStripMenuItem";
-            this.حذفداراییToolStripMenuItem.Size = new System.Drawing.Size(207, 30);
+            this.حذفداراییToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.حذفداراییToolStripMenuItem.Text = "حذف دارایی";
             this.حذفداراییToolStripMenuItem.Click += new System.EventHandler(this.حذفداراییToolStripMenuItem_Click);
             // 
             // بروزرسانیداراییToolStripMenuItem
             // 
             this.بروزرسانیداراییToolStripMenuItem.Name = "بروزرسانیداراییToolStripMenuItem";
-            this.بروزرسانیداراییToolStripMenuItem.Size = new System.Drawing.Size(207, 30);
+            this.بروزرسانیداراییToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.بروزرسانیداراییToolStripMenuItem.Text = "بروزرسانی دارایی";
             this.بروزرسانیداراییToolStripMenuItem.Click += new System.EventHandler(this.بروزرسانیداراییToolStripMenuItem_Click);
             // 
             // مدیریتداراییمرکبToolStripMenuItem
             // 
             this.مدیریتداراییمرکبToolStripMenuItem.Name = "مدیریتداراییمرکبToolStripMenuItem";
-            this.مدیریتداراییمرکبToolStripMenuItem.Size = new System.Drawing.Size(207, 30);
+            this.مدیریتداراییمرکبToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.مدیریتداراییمرکبToolStripMenuItem.Text = "مدیریت دارایی مرکب";
             this.مدیریتداراییمرکبToolStripMenuItem.Click += new System.EventHandler(this.مدیریتداراییمرکبToolStripMenuItem_Click);
             // 
             // مشاهدهلیستداراییهاToolStripMenuItem
             // 
             this.مشاهدهلیستداراییهاToolStripMenuItem.Name = "مشاهدهلیستداراییهاToolStripMenuItem";
-            this.مشاهدهلیستداراییهاToolStripMenuItem.Size = new System.Drawing.Size(207, 30);
+            this.مشاهدهلیستداراییهاToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.مشاهدهلیستداراییهاToolStripMenuItem.Text = "مشاهده لیست دارایی ها";
             this.مشاهدهلیستداراییهاToolStripMenuItem.Click += new System.EventHandler(this.مشاهدهلیستداراییهاToolStripMenuItem_Click);
             // 
             // مشاهدهداراییToolStripMenuItem
             // 
             this.مشاهدهداراییToolStripMenuItem.Name = "مشاهدهداراییToolStripMenuItem";
-            this.مشاهدهداراییToolStripMenuItem.Size = new System.Drawing.Size(207, 30);
+            this.مشاهدهداراییToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.مشاهدهداراییToolStripMenuItem.Text = "مشاهده دارایی";
             this.مشاهدهداراییToolStripMenuItem.Click += new System.EventHandler(this.مشاهدهداراییToolStripMenuItem_Click);
             // 
@@ -194,48 +197,48 @@ namespace WindowsFormsApplication1
             this.مشاهدهیکبرچسبToolStripMenuItem});
             this.برچسبToolStripMenuItem.Name = "برچسبToolStripMenuItem";
             this.برچسبToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 0);
-            this.برچسبToolStripMenuItem.Size = new System.Drawing.Size(95, 40);
+            this.برچسبToolStripMenuItem.Size = new System.Drawing.Size(71, 35);
             this.برچسبToolStripMenuItem.Text = "برچسب";
             // 
             // ایجادبرچسبToolStripMenuItem
             // 
             this.ایجادبرچسبToolStripMenuItem.Name = "ایجادبرچسبToolStripMenuItem";
-            this.ایجادبرچسبToolStripMenuItem.Size = new System.Drawing.Size(218, 30);
+            this.ایجادبرچسبToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
             this.ایجادبرچسبToolStripMenuItem.Text = "ایجاد برچسب";
             this.ایجادبرچسبToolStripMenuItem.Click += new System.EventHandler(this.ایجادبرچسبToolStripMenuItem_Click);
             // 
             // حذفبرچسبToolStripMenuItem
             // 
             this.حذفبرچسبToolStripMenuItem.Name = "حذفبرچسبToolStripMenuItem";
-            this.حذفبرچسبToolStripMenuItem.Size = new System.Drawing.Size(218, 30);
+            this.حذفبرچسبToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
             this.حذفبرچسبToolStripMenuItem.Text = "حذف برچسب";
             this.حذفبرچسبToolStripMenuItem.Click += new System.EventHandler(this.حذفبرچسبToolStripMenuItem_Click);
             // 
             // بروزرسانیبرچسبToolStripMenuItem
             // 
             this.بروزرسانیبرچسبToolStripMenuItem.Name = "بروزرسانیبرچسبToolStripMenuItem";
-            this.بروزرسانیبرچسبToolStripMenuItem.Size = new System.Drawing.Size(218, 30);
+            this.بروزرسانیبرچسبToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
             this.بروزرسانیبرچسبToolStripMenuItem.Text = "بروزرسانی برچسب";
             this.بروزرسانیبرچسبToolStripMenuItem.Click += new System.EventHandler(this.بروزرسانیبرچسبToolStripMenuItem_Click);
             // 
             // مدیریتبرچسبمرکبToolStripMenuItem
             // 
             this.مدیریتبرچسبمرکبToolStripMenuItem.Name = "مدیریتبرچسبمرکبToolStripMenuItem";
-            this.مدیریتبرچسبمرکبToolStripMenuItem.Size = new System.Drawing.Size(218, 30);
+            this.مدیریتبرچسبمرکبToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
             this.مدیریتبرچسبمرکبToolStripMenuItem.Text = "مدیریت برچسب مرکب";
             this.مدیریتبرچسبمرکبToolStripMenuItem.Click += new System.EventHandler(this.مدیریتبرچسبمرکبToolStripMenuItem_Click);
             // 
             // مشاهدهلیستبرچسبهاToolStripMenuItem
             // 
             this.مشاهدهلیستبرچسبهاToolStripMenuItem.Name = "مشاهدهلیستبرچسبهاToolStripMenuItem";
-            this.مشاهدهلیستبرچسبهاToolStripMenuItem.Size = new System.Drawing.Size(218, 30);
+            this.مشاهدهلیستبرچسبهاToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
             this.مشاهدهلیستبرچسبهاToolStripMenuItem.Text = "مشاهده لیست برچسب ها";
             this.مشاهدهلیستبرچسبهاToolStripMenuItem.Click += new System.EventHandler(this.مشاهدهلیستبرچسبهاToolStripMenuItem_Click);
             // 
             // مشاهدهیکبرچسبToolStripMenuItem
             // 
             this.مشاهدهیکبرچسبToolStripMenuItem.Name = "مشاهدهیکبرچسبToolStripMenuItem";
-            this.مشاهدهیکبرچسبToolStripMenuItem.Size = new System.Drawing.Size(218, 30);
+            this.مشاهدهیکبرچسبToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
             this.مشاهدهیکبرچسبToolStripMenuItem.Text = "مشاهده یک برچسب";
             this.مشاهدهیکبرچسبToolStripMenuItem.Click += new System.EventHandler(this.مشاهدهیکبرچسبToolStripMenuItem_Click);
             // 
@@ -245,13 +248,13 @@ namespace WindowsFormsApplication1
             this.مدیریتالصاقبرچسببهداراییToolStripMenuItem});
             this.مدیریتالصاقToolStripMenuItem.Name = "مدیریتالصاقToolStripMenuItem";
             this.مدیریتالصاقToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 0);
-            this.مدیریتالصاقToolStripMenuItem.Size = new System.Drawing.Size(95, 40);
+            this.مدیریتالصاقToolStripMenuItem.Size = new System.Drawing.Size(71, 35);
             this.مدیریتالصاقToolStripMenuItem.Text = "مدیریت الصاق";
             // 
             // مدیریتالصاقبرچسببهداراییToolStripMenuItem
             // 
             this.مدیریتالصاقبرچسببهداراییToolStripMenuItem.Name = "مدیریتالصاقبرچسببهداراییToolStripMenuItem";
-            this.مدیریتالصاقبرچسببهداراییToolStripMenuItem.Size = new System.Drawing.Size(250, 30);
+            this.مدیریتالصاقبرچسببهداراییToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
             this.مدیریتالصاقبرچسببهداراییToolStripMenuItem.Text = "مدیریت الصاق برچسب به دارایی";
             this.مدیریتالصاقبرچسببهداراییToolStripMenuItem.Click += new System.EventHandler(this.مدیریتالصاقبرچسببهداراییToolStripMenuItem_Click);
             // 
@@ -261,13 +264,13 @@ namespace WindowsFormsApplication1
             this.ثبتتغییروضعیتبرچسبهایداراییToolStripMenuItem});
             this.ثبتتغییرToolStripMenuItem.Name = "ثبتتغییرToolStripMenuItem";
             this.ثبتتغییرToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 0);
-            this.ثبتتغییرToolStripMenuItem.Size = new System.Drawing.Size(95, 40);
+            this.ثبتتغییرToolStripMenuItem.Size = new System.Drawing.Size(71, 35);
             this.ثبتتغییرToolStripMenuItem.Text = "ثبت تغییر";
             // 
             // ثبتتغییروضعیتبرچسبهایداراییToolStripMenuItem
             // 
             this.ثبتتغییروضعیتبرچسبهایداراییToolStripMenuItem.Name = "ثبتتغییروضعیتبرچسبهایداراییToolStripMenuItem";
-            this.ثبتتغییروضعیتبرچسبهایداراییToolStripMenuItem.Size = new System.Drawing.Size(283, 30);
+            this.ثبتتغییروضعیتبرچسبهایداراییToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
             this.ثبتتغییروضعیتبرچسبهایداراییToolStripMenuItem.Text = "ثبت تغییر وضعیت برچسب های دارایی";
             this.ثبتتغییروضعیتبرچسبهایداراییToolStripMenuItem.Click += new System.EventHandler(this.ثبتتغییروضعیتبرچسبهایداراییToolStripMenuItem_Click);
             // 
@@ -280,34 +283,34 @@ namespace WindowsFormsApplication1
             this.گزارشگیریسریزمانیToolStripMenuItem});
             this.گزارشگیریToolStripMenuItem.Name = "گزارشگیریToolStripMenuItem";
             this.گزارشگیریToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 0);
-            this.گزارشگیریToolStripMenuItem.Size = new System.Drawing.Size(95, 40);
+            this.گزارشگیریToolStripMenuItem.Size = new System.Drawing.Size(71, 35);
             this.گزارشگیریToolStripMenuItem.Text = "گزارش گیری";
             // 
             // گزارشگیریبراساسبرچسبToolStripMenuItem
             // 
             this.گزارشگیریبراساسبرچسبToolStripMenuItem.Name = "گزارشگیریبراساسبرچسبToolStripMenuItem";
-            this.گزارشگیریبراساسبرچسبToolStripMenuItem.Size = new System.Drawing.Size(280, 30);
+            this.گزارشگیریبراساسبرچسبToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
             this.گزارشگیریبراساسبرچسبToolStripMenuItem.Text = "گزارش گیری بر اساس برچسب";
             this.گزارشگیریبراساسبرچسبToolStripMenuItem.Click += new System.EventHandler(this.گزارشگیریبراساسبرچسبToolStripMenuItem_Click);
             // 
             // گزارشگیریبراساسداراییToolStripMenuItem
             // 
             this.گزارشگیریبراساسداراییToolStripMenuItem.Name = "گزارشگیریبراساسداراییToolStripMenuItem";
-            this.گزارشگیریبراساسداراییToolStripMenuItem.Size = new System.Drawing.Size(280, 30);
+            this.گزارشگیریبراساسداراییToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
             this.گزارشگیریبراساسداراییToolStripMenuItem.Text = "گزارش گیری بر اساس دارایی";
             this.گزارشگیریبراساسداراییToolStripMenuItem.Click += new System.EventHandler(this.گزارشگیریبراساسداراییToolStripMenuItem_Click);
             // 
             // گزارشگیریبراساسیکعملخاصToolStripMenuItem
             // 
             this.گزارشگیریبراساسیکعملخاصToolStripMenuItem.Name = "گزارشگیریبراساسیکعملخاصToolStripMenuItem";
-            this.گزارشگیریبراساسیکعملخاصToolStripMenuItem.Size = new System.Drawing.Size(280, 30);
+            this.گزارشگیریبراساسیکعملخاصToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
             this.گزارشگیریبراساسیکعملخاصToolStripMenuItem.Text = "گزارش گیری بر اساس یک عمل خاص";
             this.گزارشگیریبراساسیکعملخاصToolStripMenuItem.Click += new System.EventHandler(this.گزارشگیریبراساسیکعملخاصToolStripMenuItem_Click);
             // 
             // گزارشگیریسریزمانیToolStripMenuItem
             // 
             this.گزارشگیریسریزمانیToolStripMenuItem.Name = "گزارشگیریسریزمانیToolStripMenuItem";
-            this.گزارشگیریسریزمانیToolStripMenuItem.Size = new System.Drawing.Size(280, 30);
+            this.گزارشگیریسریزمانیToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
             this.گزارشگیریسریزمانیToolStripMenuItem.Text = "گزارش گیری سری زمانی";
             this.گزارشگیریسریزمانیToolStripMenuItem.Click += new System.EventHandler(this.گزارشگیریسریزمانیToolStripMenuItem_Click);
             // 
@@ -319,27 +322,28 @@ namespace WindowsFormsApplication1
             this.مدیریتنقطهمبناToolStripMenuItem});
             this.سابقهToolStripMenuItem.Name = "سابقهToolStripMenuItem";
             this.سابقهToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 0);
-            this.سابقهToolStripMenuItem.Size = new System.Drawing.Size(95, 40);
+            this.سابقهToolStripMenuItem.Size = new System.Drawing.Size(71, 35);
             this.سابقهToolStripMenuItem.Text = "سابقه";
+            this.سابقهToolStripMenuItem.Click += new System.EventHandler(this.سابقهToolStripMenuItem_Click);
             // 
             // مشاهدهسابقهToolStripMenuItem
             // 
             this.مشاهدهسابقهToolStripMenuItem.Name = "مشاهدهسابقهToolStripMenuItem";
-            this.مشاهدهسابقهToolStripMenuItem.Size = new System.Drawing.Size(261, 30);
+            this.مشاهدهسابقهToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.مشاهدهسابقهToolStripMenuItem.Text = "مشاهده سابقه دارایی";
             this.مشاهدهسابقهToolStripMenuItem.Click += new System.EventHandler(this.مشاهدهسابقهToolStripMenuItem_Click);
             // 
             // بازگرداندنیکداراییبهیکسابقهToolStripMenuItem
             // 
             this.بازگرداندنیکداراییبهیکسابقهToolStripMenuItem.Name = "بازگرداندنیکداراییبهیکسابقهToolStripMenuItem";
-            this.بازگرداندنیکداراییبهیکسابقهToolStripMenuItem.Size = new System.Drawing.Size(261, 30);
+            this.بازگرداندنیکداراییبهیکسابقهToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.بازگرداندنیکداراییبهیکسابقهToolStripMenuItem.Text = "بازگرداندن یک دارایی به یک سابقه";
             this.بازگرداندنیکداراییبهیکسابقهToolStripMenuItem.Click += new System.EventHandler(this.بازگرداندنیکداراییبهیکسابقهToolStripMenuItem_Click);
             // 
             // مدیریتنقطهمبناToolStripMenuItem
             // 
             this.مدیریتنقطهمبناToolStripMenuItem.Name = "مدیریتنقطهمبناToolStripMenuItem";
-            this.مدیریتنقطهمبناToolStripMenuItem.Size = new System.Drawing.Size(261, 30);
+            this.مدیریتنقطهمبناToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.مدیریتنقطهمبناToolStripMenuItem.Text = "مدیریت نقطه مبنا";
             this.مدیریتنقطهمبناToolStripMenuItem.Click += new System.EventHandler(this.مدیریتنقطهمبناToolStripMenuItem_Click);
             // 
@@ -353,41 +357,41 @@ namespace WindowsFormsApplication1
             this.اعمالعملیاتToolStripMenuItem});
             this.عملیاتToolStripMenuItem.Name = "عملیاتToolStripMenuItem";
             this.عملیاتToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 0);
-            this.عملیاتToolStripMenuItem.Size = new System.Drawing.Size(95, 40);
+            this.عملیاتToolStripMenuItem.Size = new System.Drawing.Size(71, 35);
             this.عملیاتToolStripMenuItem.Text = "عملیات";
             // 
             // مشاهدهلیستعملیاتToolStripMenuItem
             // 
             this.مشاهدهلیستعملیاتToolStripMenuItem.Name = "مشاهدهلیستعملیاتToolStripMenuItem";
-            this.مشاهدهلیستعملیاتToolStripMenuItem.Size = new System.Drawing.Size(201, 30);
+            this.مشاهدهلیستعملیاتToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.مشاهدهلیستعملیاتToolStripMenuItem.Text = "مشاهده لیست عملیات";
             this.مشاهدهلیستعملیاتToolStripMenuItem.Click += new System.EventHandler(this.مشاهدهلیستعملیاتToolStripMenuItem_Click);
             // 
             // تعریفعملیاتجدیدToolStripMenuItem
             // 
             this.تعریفعملیاتجدیدToolStripMenuItem.Name = "تعریفعملیاتجدیدToolStripMenuItem";
-            this.تعریفعملیاتجدیدToolStripMenuItem.Size = new System.Drawing.Size(201, 30);
+            this.تعریفعملیاتجدیدToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.تعریفعملیاتجدیدToolStripMenuItem.Text = "تعریف عملیات جدید";
             this.تعریفعملیاتجدیدToolStripMenuItem.Click += new System.EventHandler(this.تعریفعملیاتجدیدToolStripMenuItem_Click);
             // 
             // حذفعملیاتToolStripMenuItem
             // 
             this.حذفعملیاتToolStripMenuItem.Name = "حذفعملیاتToolStripMenuItem";
-            this.حذفعملیاتToolStripMenuItem.Size = new System.Drawing.Size(201, 30);
+            this.حذفعملیاتToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.حذفعملیاتToolStripMenuItem.Text = "حذف عملیات";
             this.حذفعملیاتToolStripMenuItem.Click += new System.EventHandler(this.حذفعملیاتToolStripMenuItem_Click);
             // 
             // مدیریتعملیاتمرکبToolStripMenuItem
             // 
             this.مدیریتعملیاتمرکبToolStripMenuItem.Name = "مدیریتعملیاتمرکبToolStripMenuItem";
-            this.مدیریتعملیاتمرکبToolStripMenuItem.Size = new System.Drawing.Size(201, 30);
+            this.مدیریتعملیاتمرکبToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.مدیریتعملیاتمرکبToolStripMenuItem.Text = "مدیریت عملیات مرکب";
             this.مدیریتعملیاتمرکبToolStripMenuItem.Click += new System.EventHandler(this.مدیریتعملیاتمرکبToolStripMenuItem_Click);
             // 
             // اعمالعملیاتToolStripMenuItem
             // 
             this.اعمالعملیاتToolStripMenuItem.Name = "اعمالعملیاتToolStripMenuItem";
-            this.اعمالعملیاتToolStripMenuItem.Size = new System.Drawing.Size(201, 30);
+            this.اعمالعملیاتToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.اعمالعملیاتToolStripMenuItem.Text = "اعمال عملیات";
             this.اعمالعملیاتToolStripMenuItem.Click += new System.EventHandler(this.اعمالعملیاتToolStripMenuItem_Click);
             // 
@@ -397,13 +401,13 @@ namespace WindowsFormsApplication1
             this.مدیریترخدادToolStripMenuItem});
             this.رخدادToolStripMenuItem.Name = "رخدادToolStripMenuItem";
             this.رخدادToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 0);
-            this.رخدادToolStripMenuItem.Size = new System.Drawing.Size(95, 40);
+            this.رخدادToolStripMenuItem.Size = new System.Drawing.Size(71, 35);
             this.رخدادToolStripMenuItem.Text = "رخداد";
             // 
             // مدیریترخدادToolStripMenuItem
             // 
             this.مدیریترخدادToolStripMenuItem.Name = "مدیریترخدادToolStripMenuItem";
-            this.مدیریترخدادToolStripMenuItem.Size = new System.Drawing.Size(158, 30);
+            this.مدیریترخدادToolStripMenuItem.Size = new System.Drawing.Size(141, 26);
             this.مدیریترخدادToolStripMenuItem.Text = "مدیریت رخداد";
             this.مدیریترخدادToolStripMenuItem.Click += new System.EventHandler(this.مدیریترخدادToolStripMenuItem_Click);
             // 
@@ -415,27 +419,27 @@ namespace WindowsFormsApplication1
             this.رمزهایعبورToolStripMenuItem});
             this.تنظیماتToolStripMenuItem.Name = "تنظیماتToolStripMenuItem";
             this.تنظیماتToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 0);
-            this.تنظیماتToolStripMenuItem.Size = new System.Drawing.Size(95, 40);
+            this.تنظیماتToolStripMenuItem.Size = new System.Drawing.Size(71, 35);
             this.تنظیماتToolStripMenuItem.Text = "تنظیمات";
             // 
             // تنظیمسیستمToolStripMenuItem
             // 
             this.تنظیمسیستمToolStripMenuItem.Name = "تنظیمسیستمToolStripMenuItem";
-            this.تنظیمسیستمToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.تنظیمسیستمToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
             this.تنظیمسیستمToolStripMenuItem.Text = "زمان محاسبه وضعیت برچسب ها";
             this.تنظیمسیستمToolStripMenuItem.Click += new System.EventHandler(this.تنظیمسیستمToolStripMenuItem_Click);
             // 
             // محاسبهمختصاتمکانیToolStripMenuItem
             // 
             this.محاسبهمختصاتمکانیToolStripMenuItem.Name = "محاسبهمختصاتمکانیToolStripMenuItem";
-            this.محاسبهمختصاتمکانیToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.محاسبهمختصاتمکانیToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
             this.محاسبهمختصاتمکانیToolStripMenuItem.Text = "محاسبه مختصات مکانی";
             this.محاسبهمختصاتمکانیToolStripMenuItem.Click += new System.EventHandler(this.محاسبهمختصاتمکانیToolStripMenuItem_Click);
             // 
             // رمزهایعبورToolStripMenuItem
             // 
             this.رمزهایعبورToolStripMenuItem.Name = "رمزهایعبورToolStripMenuItem";
-            this.رمزهایعبورToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.رمزهایعبورToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
             this.رمزهایعبورToolStripMenuItem.Text = "رمزهای عبور";
             this.رمزهایعبورToolStripMenuItem.Click += new System.EventHandler(this.رمزهایعبورToolStripMenuItem_Click);
             // 
@@ -443,16 +447,17 @@ namespace WindowsFormsApplication1
             // 
             this.خروجToolStripMenuItem.Name = "خروجToolStripMenuItem";
             this.خروجToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 0);
-            this.خروجToolStripMenuItem.Size = new System.Drawing.Size(95, 40);
+            this.خروجToolStripMenuItem.Size = new System.Drawing.Size(71, 35);
             this.خروجToolStripMenuItem.Text = "خروج";
             this.خروجToolStripMenuItem.Click += new System.EventHandler(this.خروجToolStripMenuItem_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1130, 631);
+            this.ClientSize = new System.Drawing.Size(848, 513);
             this.Controls.Add(this.splitContainer1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "سامانه شهرداری";

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApplication1.model;
+using WindowsFormsApplication1.model.DB;
 
 namespace WindowsFormsApplication1
 {
@@ -16,8 +17,8 @@ namespace WindowsFormsApplication1
         [STAThread]
         static void Main()
         {
-            DatabaseContext db = new DatabaseContext();
-            db.Database.Initialize(true);
+            //DatabaseContext db = new DatabaseContext();
+            //db.Database.Initialize(true);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

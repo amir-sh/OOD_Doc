@@ -17,19 +17,16 @@ using WindowsFormsApplication1.model.management;
 using WindowsFormsApplication1.model.util;
 using WindowsFormsApplication1.model.validation;
 
-namespace WindowsFormsApplication1.model
+namespace WindowsFormsApplication1.model.DB
 {
-    class DatabaseContext : DbContext
+    public class DatabaseContext : DbContext
     {
-        static DatabaseContext()
-        {
-
-        }
+       
 
         public DatabaseContext()
             : base("SQLConnection")
         {
-            Database.SetInitializer(new DropCreateDatabaseAlways<DatabaseContext>());
+           
         }
         //Asset
         public DbSet<Asset> Assets { get; set; }
@@ -38,23 +35,23 @@ namespace WindowsFormsApplication1.model
 
         //Label
         public DbSet<Label> Labels { get; set; }
-        
+
         //Maintenance
         public DbSet<WindowsFormsApplication1.model.maintenance.function.Action> GeneralActions { get; set; }
         public DbSet<Event> Events { get; set; }
         public DbSet<EventManager> EventManagers { get; set; }
-        
-        
+
+
 
         //Management
-        public DbSet<Configuration> Configuration { get; set; }
+        public DbSet<Configuration> Configurations { get; set; }
 
         //Util
         public DbSet<Constthing> things { get; set; }
 
         //Validation
         public DbSet<Constraint> constraints { get; set; }
-       
+
 
     }
 

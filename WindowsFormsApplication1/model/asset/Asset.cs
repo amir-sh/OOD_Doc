@@ -33,5 +33,10 @@ namespace WindowsFormsApplication1.model.asset
         public virtual ICollection<AssignedLabel> labels { get; set; }
         public virtual DateTime date { get; set; }
 
+        public override string ToString()
+        {
+            return name;
+        }
+
     }
 }

@@ -47,12 +47,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Devart.Data">
-      <HintPath>..\packages\dotConnect.Express.for.PostgreSQL.7.2.103\lib\Devart.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Devart.Data.PostgreSql">
-      <HintPath>..\packages\dotConnect.Express.for.PostgreSQL.7.2.103\lib\Devart.Data.PostgreSql.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
@@ -299,18 +293,21 @@
     <Compile Include="forms\settings\Passwords.Designer.cs">
       <DependentUpon>Passwords.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\Utility\FormLoad.cs" />
     <Compile Include="model\asset\Asset.cs" />
     <Compile Include="model\asset\AssetManager.cs" />
     <Compile Include="model\asset\attachment\File.cs" />
     <Compile Include="model\asset\FeatureThing.cs" />
-    <Compile Include="model\DatabaseContext.cs" />
+    <Compile Include="model\DB\DatabaseContext.cs" />
+    <Compile Include="model\DB\DatabaseInitializer.cs" />
+    <Compile Include="model\DB\DBManager.cs" />
     <Compile Include="model\label\Label.cs" />
     <Compile Include="model\label\AssignedLabel.cs" />
     <Compile Include="model\label\LabelManager.cs" />
     <Compile Include="model\maintenance\function\Action.cs" />
     <Compile Include="model\maintenance\function\ActionManager.cs" />
-    <Compile Include="model\maintenance\occurrence\Event.cs" />
-    <Compile Include="model\maintenance\occurrence\EventManager.cs" />
+    <Compile Include="forms\settings\occurrence\Event.cs" />
+    <Compile Include="forms\settings\occurrence\EventManager.cs" />
     <Compile Include="model\management\Configuration.cs" />
     <Compile Include="model\util\ConstThing.cs" />
     <Compile Include="model\util\LabelThing.cs" />

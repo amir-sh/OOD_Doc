@@ -95,7 +95,7 @@ namespace WindowsFormsApplication1
 
         private void مشاهدهلیستداراییهاToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DarayiListViewe userControl = new DarayiListViewe();
+            AssetListView userControl = new AssetListView();
             ResetAndAddToPrimaryPanel(userControl);
         }
 
@@ -264,6 +264,11 @@ namespace WindowsFormsApplication1
         {
             Passwords userControl = new Passwords();
             ResetAndAddToPrimaryPanel(userControl);
+        }
+
+        private void سابقهToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

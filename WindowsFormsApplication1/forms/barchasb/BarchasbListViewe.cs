@@ -26,5 +26,10 @@ namespace WindowsFormsApplication1.forms.barchasb
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
