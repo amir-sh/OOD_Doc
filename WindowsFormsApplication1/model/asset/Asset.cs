@@ -38,10 +38,21 @@ namespace WindowsFormsApplication1.model.asset
             return name;
         }
 
-        public static IQueryable <Asset> getByName(string name)
+        public static IQueryable <Asset> GetByName(string name)
         {
             return DBManager.datacontext.Assets.Where(asset => asset.name == name);
         }
+        public void RemoveSubAsset(Asset asset) 
+        {
+          //  name = "کیر";
+            subAssets.Remove(asset);
+        }
 
+        internal void AddSubAsset(Asset childasset)
+        {
+            //TODO agar be onvane bache already hast 
+            if(!subAssets.Contains(childasset))
+                subAssets.Add(childasset);
+        }
     }
 }

@@ -28,20 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("خیابان آزادی");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("چراغ خیابان آزادی");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("دارایی های خیابان آزادی", new System.Windows.Forms.TreeNode[] {
-            treeNode4,
-            treeNode5});
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.SelectAsset = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.RmAssetCombox = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.AddSubasset = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -92,7 +87,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.comboBox1);
+            this.groupBox3.Controls.Add(this.RmAssetCombox);
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Location = new System.Drawing.Point(260, 288);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
@@ -113,14 +108,14 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "زیر دارایی مورد نظر:";
             // 
-            // comboBox1
+            // RmAssetCombox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(224, 47);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(114, 29);
-            this.comboBox1.TabIndex = 3;
+            this.RmAssetCombox.FormattingEnabled = true;
+            this.RmAssetCombox.Location = new System.Drawing.Point(224, 47);
+            this.RmAssetCombox.Margin = new System.Windows.Forms.Padding(2);
+            this.RmAssetCombox.Name = "RmAssetCombox";
+            this.RmAssetCombox.Size = new System.Drawing.Size(114, 29);
+            this.RmAssetCombox.TabIndex = 3;
             // 
             // button2
             // 
@@ -131,10 +126,11 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "حذف زیر دارایی";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.AddSubasset);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Location = new System.Drawing.Point(260, 166);
@@ -146,15 +142,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "افزودن زیر دارایی";
             // 
-            // button1
+            // AddSubasset
             // 
-            this.button1.Location = new System.Drawing.Point(23, 38);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 28);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "اضافه کردن زیر دارایی";
-            this.button1.UseVisualStyleBackColor = true;
+            this.AddSubasset.Location = new System.Drawing.Point(23, 38);
+            this.AddSubasset.Margin = new System.Windows.Forms.Padding(2);
+            this.AddSubasset.Name = "AddSubasset";
+            this.AddSubasset.Size = new System.Drawing.Size(123, 28);
+            this.AddSubasset.TabIndex = 4;
+            this.AddSubasset.Text = "اضافه کردن زیر دارایی";
+            this.AddSubasset.UseVisualStyleBackColor = true;
+            this.AddSubasset.Click += new System.EventHandler(this.AddSubasset_Click);
             // 
             // label1
             // 
@@ -190,18 +187,11 @@
             this.treeView1.Location = new System.Drawing.Point(26, 103);
             this.treeView1.Margin = new System.Windows.Forms.Padding(2);
             this.treeView1.Name = "treeView1";
-            treeNode4.Name = "Node1";
-            treeNode4.Text = "خیابان آزادی";
-            treeNode5.Name = "Node2";
-            treeNode5.Text = "چراغ خیابان آزادی";
-            treeNode6.Name = "Node0";
-            treeNode6.Text = "دارایی های خیابان آزادی";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode6});
             this.treeView1.RightToLeftLayout = true;
             this.treeView1.Size = new System.Drawing.Size(196, 290);
             this.treeView1.TabIndex = 10;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            this.treeView1.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseDoubleClick);
             // 
             // ComplexDarayiManagement
             // 
@@ -211,6 +201,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ComplexDarayiManagement";
             this.Size = new System.Drawing.Size(766, 510);
+            this.Load += new System.EventHandler(this.textBox1_Load);
             this.Load += new System.EventHandler(this.SelectAsset_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -227,10 +218,10 @@
         protected System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox RmAssetCombox;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AddSubasset;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
