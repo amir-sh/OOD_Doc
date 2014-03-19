@@ -106,6 +106,29 @@ namespace WindowsFormsApplication1.forms.Utility
                 comboBox.Items.AddRange(init);
         }
 
+        public static void SetAutoComplete(TextBox textbox, IQueryable<Object> queryable) 
+        {
+
+            if (queryable != null )
+                SetAutoComplete(textbox, queryable.ToArray()) ;
+        
+        }
+        public static void SetAutoComplete(TextBox textbox, Object [] init) 
+        {
+            if (init != null)
+            {
+                var source = new AutoCompleteStringCollection();
+                source.Add("سلام");
+                for (int i =0 ; i< init.Length ; i++)
+                    source.Add(init[i].ToString());
+               
+                textbox.AutoCompleteCustomSource = source;
+                textbox.AutoCompleteMode = AutoCompleteMode.Suggest;
+                textbox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                //textbox.AutoCompleteSource = AutoCompleteSource.ListItems;
+                //textbox.Auto
+            }
+        }
         public static void Refresh(ComboBox comboBox, IQueryable<Object> queryable)
         {
             if (queryable != null)

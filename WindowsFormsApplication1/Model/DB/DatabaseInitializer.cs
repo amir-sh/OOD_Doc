@@ -8,7 +8,7 @@ using WindowsFormsApplication1.model.DB;
 
 namespace WindowsFormsApplicatoin1.model.DB
 {
-    public class DatabaseInitializer : DropCreateDatabaseAlways<DatabaseContext> 
+    public class DatabaseInitializer : DropCreateDatabaseIfModelChanges<DatabaseContext> 
     {
         protected override void Seed(DatabaseContext context)
         {

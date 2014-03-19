@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using WindowsFormsApplication1.model.asset;
 using WindowsFormsApplication1.model.label;
 using WindowsFormsApplication1.model.validation;
-
+using WindowsFormsApplication1.model.DB;
 namespace WindowsFormsApplication1.model.asset
 {
     public class Asset
@@ -36,6 +36,11 @@ namespace WindowsFormsApplication1.model.asset
         public override string ToString()
         {
             return name;
+        }
+
+        public IQueryable <Asset> getByName(string name)
+        {
+            return DBManager.datacontext.Assets.Where(asset => asset.name == name);
         }
 
     }

@@ -119,6 +119,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(76, 29);
             this.textBox1.TabIndex = 30;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // assetname
             // 
@@ -183,10 +184,12 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AssetListView";
             this.Size = new System.Drawing.Size(766, 510);
+            this.Load += new System.EventHandler(this.comboBox1_Load);
+            this.Load += new System.EventHandler(this.textBox1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.Load += new System.EventHandler(this.comboBox1_Load);
+
         }
 
         #endregion

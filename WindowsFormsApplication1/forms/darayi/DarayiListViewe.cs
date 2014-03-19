@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1.forms.darayi
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-
+            textBox1.i56
         }
 
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)
@@ -45,12 +45,22 @@ namespace WindowsFormsApplication1.forms.darayi
             FormLoad.Refresh(comboBox1, DBManager.datacontext.Assets);
         }
 
+        private void textBox1_Load(object sender, EventArgs e) 
+        {
+            FormLoad.SetAutoComplete(textBox1, DBManager.datacontext.Assets);
+        }
+
         private void submit_Click(object sender, EventArgs e)
         {
             string message = "کیر";
             MessageBox.Show(message, "اطلاع", MessageBoxButtons.OK, MessageBoxIcon.Asterisk,
                 MessageBoxDefaultButton.Button1,
                 MessageBoxOptions.RtlReading);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
     }
