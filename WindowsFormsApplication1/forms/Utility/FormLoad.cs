@@ -125,6 +125,7 @@ namespace WindowsFormsApplication1.forms.Utility
                 textbox.AutoCompleteCustomSource = source;
                 textbox.AutoCompleteMode = AutoCompleteMode.Suggest;
                 textbox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                
                 //textbox.AutoCompleteSource = AutoCompleteSource.ListItems;
                 //textbox.Auto
             }

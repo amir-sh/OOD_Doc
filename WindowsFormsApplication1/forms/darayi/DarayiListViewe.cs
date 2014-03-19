@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1.forms.darayi
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            textBox1.i56
+            
         }
 
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)

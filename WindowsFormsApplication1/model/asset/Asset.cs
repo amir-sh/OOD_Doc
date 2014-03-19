@@ -38,7 +38,7 @@ namespace WindowsFormsApplication1.model.asset
             return name;
         }
 
-        public IQueryable <Asset> getByName(string name)
+        public static IQueryable <Asset> getByName(string name)
         {
             return DBManager.datacontext.Assets.Where(asset => asset.name == name);
         }

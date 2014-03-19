@@ -11,6 +11,7 @@ namespace WindowsFormsApplication1
 {
     static class Program
     {
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -19,6 +20,7 @@ namespace WindowsFormsApplication1
         {
             //DatabaseContext db = new DatabaseContext();
             //db.Database.Initialize(true);
+            var db = DBManager.datacontext;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
