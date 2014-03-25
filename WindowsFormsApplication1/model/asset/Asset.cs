@@ -48,7 +48,7 @@ namespace WindowsFormsApplication1.model.asset
             subAssets.Remove(asset);
         }
 
-        internal void AddSubAsset(Asset childasset)
+        public void AddSubAsset(Asset childasset)
         {
             //TODO agar be onvane bache already hast 
             if(!subAssets.Contains(childasset))

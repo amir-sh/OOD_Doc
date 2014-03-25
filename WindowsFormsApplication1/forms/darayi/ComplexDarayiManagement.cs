@@ -16,29 +16,7 @@ namespace WindowsFormsApplication1.forms.darayi
 {
     public partial class ComplexDarayiManagement : UserControl
     {
-        public class AssetNode : TreeNode
-        {
-            public Asset asset { get; set; }
-            public AssetNode(Asset asset)
-            {
-                if (asset != null)
-                {
-                    this.Text = asset.ToString(); //Or FriendlyName
-                    this.asset = asset;
-                }
-                else
-                    this.Text = "";
-            }       
-            public void MakeTree ()
-            {
-                foreach (Asset a in asset.subAssets)
-                {
-                    var temp = new AssetNode(a);
-                    temp.MakeTree();
-                    this.Nodes.Add(temp);
-                }
-            }
-        };
+        
         private Asset asset { get; set; } 
         public ComplexDarayiManagement()
         {
@@ -65,16 +43,9 @@ namespace WindowsFormsApplication1.forms.darayi
         {
             FormLoad.SetAutoComplete(textBox1, DBManager.datacontext.Assets);
         }
-        private void SelectAsset_TextChanged(object sender, EventArgs e)
-        {
+       
 
-        }
-
-        private void SelectAsset_Enter(object sender, EventArgs e)
-        {
-
-            
-        }
+       
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
@@ -84,7 +55,7 @@ namespace WindowsFormsApplication1.forms.darayi
         private void SelectAsset_KeyPress(object sender, KeyPressEventArgs e)
         {
             
-            if (e.KeyChar == 32)
+            if (e.KeyChar == (char)Keys.Return)
             {
                 string message = "کیر";
                 //MessageBox.Show(message, "اطلاع", MessageBoxButtons.OK, MessageBoxIcon.Asterisk,
@@ -151,6 +122,22 @@ namespace WindowsFormsApplication1.forms.darayi
 
         }
 
+        private void SelectAsset_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Return)
+            {
+                
+                
+                var db = DBManager.datacontext;
+                var assets = Asset.GetByName(SelectAsset.Text).ToArray();
+                if (assets.Length > 0)
+                    asset = assets[0];
+                MakeTreeView();
+
+            }
+        }
+
+        
        
     }
 }

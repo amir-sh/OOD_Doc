@@ -95,6 +95,7 @@
     <Compile Include="forms\barchasb\CreateBarchasb.Designer.cs">
       <DependentUpon>CreateBarchasb.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\barchasb\LabelNode.cs" />
     <Compile Include="forms\barchasb\RemoveBarchasb.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,6 +120,7 @@
     <Compile Include="forms\change\ChangeBarchasb.Designer.cs">
       <DependentUpon>ChangeBarchasb.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\darayi\AssetNode.cs" />
     <Compile Include="forms\darayi\ComplexDarayiManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>

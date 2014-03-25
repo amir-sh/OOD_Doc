@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using WindowsFormsApplication1.model.maintenance;
 using WindowsFormsApplication1.model.util;
 using WindowsFormsApplication1.model.validation;
-
+using WindowsFormsApplication1.model.DB;
 namespace WindowsFormsApplication1.model.label
 {
     public class Label
@@ -27,5 +27,27 @@ namespace WindowsFormsApplication1.model.label
         public virtual ICollection<AssignedLabel> instanceLabels { get; set; }
         public virtual DateTime date { get; set; }
         public virtual ICollection<Constraint> constraints { get; set; }
+
+
+        public static IQueryable<Label> GetByName(string name)
+        {
+            return DBManager.datacontext.Labels.Where(label => label.name == name);
+        }
+
+        public void AddSubLabel(Label childlabel)
+        {
+             //if (!subLabels.Contains(childlabel))
+                subLabels.Add(childlabel);
+        }
+
+        public void RemoveSubLabel(Label label)
+        {
+            subLabels.Remove(label);
+        }
+
+        public override string ToString()
+        {
+            return name;
+        }
     }
 }
