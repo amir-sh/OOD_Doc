@@ -108,6 +108,12 @@
     <Compile Include="forms\barchasb\UpdateBarchasb.Designer.cs">
       <DependentUpon>UpdateBarchasb.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\barchasb\UpdateLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\barchasb\UpdateLabel.Designer.cs">
+      <DependentUpon>UpdateLabel.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,7 @@
     <Compile Include="forms\darayi\UpdateDarayiPhase4.Designer.cs">
       <DependentUpon>UpdateDarayiPhase4.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\elsagh\AssignedLableNode.cs" />
     <Compile Include="forms\elsagh\ManageElsaghs.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -217,6 +224,7 @@
     <Compile Include="forms\events\RunEvent.Designer.cs">
       <DependentUpon>RunEvent.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\function\ActionColumn.cs" />
     <Compile Include="forms\function\AddFunction.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -295,10 +303,13 @@
     <Compile Include="forms\settings\Passwords.Designer.cs">
       <DependentUpon>Passwords.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\Utility\Errors\DomainSpecErrors.cs" />
+    <Compile Include="forms\Utility\Errors\GeneralErrors.cs" />
+    <Compile Include="forms\Utility\Errors\PopUp.cs" />
     <Compile Include="forms\Utility\FormLoad.cs" />
     <Compile Include="model\asset\Asset.cs" />
     <Compile Include="model\asset\AssetManager.cs" />
-    <Compile Include="model\asset\attachment\File.cs" />
+    <Compile Include="model\maintenance\attachment\File.cs" />
     <Compile Include="model\asset\FeatureThing.cs" />
     <Compile Include="model\DB\DatabaseContext.cs" />
     <Compile Include="model\DB\DatabaseInitializer.cs" />
@@ -336,6 +347,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\barchasb\UpdateBarchasb.resx">
       <DependentUpon>UpdateBarchasb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\barchasb\UpdateLabel.resx">
+      <DependentUpon>UpdateLabel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>

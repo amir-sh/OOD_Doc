@@ -119,7 +119,7 @@ namespace WindowsFormsApplication1
 
         private void بروزرسانیبرچسبToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UpdateBarchasb userControl = new UpdateBarchasb();
+            UpdateLabel userControl = new UpdateLabel();
             ResetAndAddToPrimaryPanel(userControl);
         }
 

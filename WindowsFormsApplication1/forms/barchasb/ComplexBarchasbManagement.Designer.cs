@@ -203,6 +203,7 @@
             this.Name = "ComplexBarchasbManagement";
             this.Size = new System.Drawing.Size(766, 510);
             this.Load += new System.EventHandler(this.SelectLabel_Load);
+            this.Load += new System.EventHandler(this.textBox1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);

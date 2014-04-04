@@ -12,6 +12,7 @@ using WindowsFormsApplication1.model.label;
 
 using WindowsFormsApplication1.model.maintenance;
 using WindowsFormsApplication1.model.maintenance.function;
+using MyAction = WindowsFormsApplication1.model.maintenance.function.Action;
 using WindowsFormsApplication1.model.maintenance.occurrence;
 using WindowsFormsApplication1.model.management;
 using WindowsFormsApplication1.model.util;
@@ -21,8 +22,17 @@ namespace WindowsFormsApplication1.model.DB
 {
     public class DatabaseContext : DbContext
     {
-       
 
+        /*protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<MyAction>().HasMany<MyAction>(s => s.Courses).WithMany(c => c.Students).Map(c =>
+            {
+                c.MapLeftKey("Student_id");
+                c.MapRightKey("Course_id");
+                c.ToTable("StudentAndCourse");
+            });
+            base.OnModelCreating(modelBuilder);
+        }*/
         public DatabaseContext()
             : base("SQLConnection")
         {
@@ -47,7 +57,9 @@ namespace WindowsFormsApplication1.model.DB
         public DbSet<Configuration> Configurations { get; set; }
 
         //Util
-        public DbSet<Constthing> things { get; set; }
+        public DbSet<Thing> Things { get; set; }
+        public DbSet<Constthing> Constthings { get; set; }
+        //public DbSet<Thing> Things { get; set; }
 
         //Validation
         public DbSet<Constraint> constraints { get; set; }

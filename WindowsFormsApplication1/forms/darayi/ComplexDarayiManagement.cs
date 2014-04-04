@@ -12,6 +12,8 @@ using WindowsFormsApplication1.model.DB;
 using WindowsFormsApplication1.model.asset ;
 using System.Runtime.InteropServices;
 
+//this.Load += new System.EventHandler(this.SelectAsset_Load) + new System.EventHandler(this.textBox1_Load);
+
 namespace WindowsFormsApplication1.forms.darayi
 {
     public partial class ComplexDarayiManagement : UserControl

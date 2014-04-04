@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApplication1.model;
 using WindowsFormsApplication1.model.DB;
-
+using WindowsFormsApplication1.forms.Utility.Errors;
 namespace WindowsFormsApplication1
 {
     static class Program

@@ -201,7 +201,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ComplexDarayiManagement";
             this.Size = new System.Drawing.Size(766, 510);
-            this.Load += new System.EventHandler(this.SelectAsset_Load);
+            this.Load += new System.EventHandler(this.SelectAsset_Load) + new System.EventHandler(this.textBox1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);

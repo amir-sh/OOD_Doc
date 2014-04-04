@@ -34,6 +34,7 @@ namespace WindowsFormsApplication1.model.DB
                     //UpgradeScript();
                 }
 
+
            /*     if (!dbExists)
                     Database.SetInitializer(new DatabaseInitializer());
                 else
