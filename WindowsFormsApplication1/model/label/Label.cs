@@ -10,6 +10,7 @@ using WindowsFormsApplication1.model.util;
 using WindowsFormsApplication1.model.validation;
 using WindowsFormsApplication1.model.DB;
 using MyConstraint = WindowsFormsApplication1.model.validation.Constraint;
+using WindowsFormsApplication1.model.asset;
 
 namespace WindowsFormsApplication1.model.label
 {
@@ -23,6 +24,7 @@ namespace WindowsFormsApplication1.model.label
         public bool is_definer { get; set; }
         public bool is_enabled { get; set; }
         public string defaultvalue { get; set; }
+        
         
         public virtual ICollection<Label> subLabels { get; set; }
         public virtual ICollection<Label> parents { get; set; }
@@ -47,6 +49,7 @@ namespace WindowsFormsApplication1.model.label
         public static int STRINGVAL = 3;
         public Label()
         {
+            
             is_definer = false;
             is_enabled = true;
             type = STRINGVAL;
@@ -60,6 +63,24 @@ namespace WindowsFormsApplication1.model.label
 
        
         //Just For Test 
+        public IQueryable<Asset> FindIncludingAsset() 
+        {
+            var query = from a in DBManager.datacontext.Assets
+                        join b in DBManager.datacontext.AssignedLabels on a.id equals b.id
+                        where b.label.id == this.id
+                        select a;
+            return query;
+                           
+                            
+           //             where 
+           /* List<Asset> result = new List<Asset>;
+            foreach (AssignedLabel item in instanceLabels)
+                if(!result.Contains(item.asset))
+                    result.Add(item.asset);
+            return result;*/
+                  
+                                             
+        }
         public static IQueryable <Label> SelectAllLabels ()
         {
             return DBManager.datacontext.Labels.Where(label => label.is_enabled == true);
@@ -83,31 +104,52 @@ namespace WindowsFormsApplication1.model.label
             return validvalues.isValid() ;
 
         }
-        public void Remove(bool withassginedlabels) 
+        public override int GetHashCode()
+        {
+
+            return id;
+        }
+        public override bool Equals(object obj)
+        {
+            var label = obj as Label;
+            if (label == null || label.id != id)
+                return false;
+            return true;
+        }
+        public void Remove(bool withassginedlabels,bool withsuperlabels) 
         {
             IQueryable<AssignedLabel> temp = null;
             var db = DBManager.datacontext ;
             int count;
+            if (!withassginedlabels && !withsuperlabels)
+                this.is_enabled = false;
             if (withassginedlabels) 
             {
                 temp = db.AssignedLabels.Where(assigned => assigned.label.id == this.id);
                 count = temp.ToArray().Length;
                 for (int i = 0; i < count; i++)
                 {
-                    //var alaki = temp.Count();
+                    
                     temp.ToArray()[i].Remove();
                 }
                 var alaki = temp.ToArray().Count();
             }
+            if (withsuperlabels) 
+            {
+                foreach (Label item in parents)
+                    item.subLabels.Remove(this);
+            }
+            if(withassginedlabels && withsuperlabels)
+                db.Labels.Remove(this);
             //TODO remove constraint
-            int counter = validvalues.thing2.Count;
+            //int counter = validvalues.thing2.Count;
             //TODO
             /*for (int i = 0; i < counter; i++)
                 DBManager.datacontext.Constthings.Remove(validvalues.thing2.ToArray()[0]);
             counter = validvalues.thing1.Count;
             for (int i = 0; i < counter; i++)
                 DBManager.datacontext.Constthings.Remove(validvalues.thing1.ToArray()[0]);*/
-            db.Labels.Remove(this);
+            
 
 
         }
@@ -120,7 +162,7 @@ namespace WindowsFormsApplication1.model.label
                 //TODO
                 int counter = validvalues.thing2.Count;
                 for (int i = 0; i < counter; i++)
-                    DBManager.datacontext.Constthings.Remove(validvalues.thing2.ToArray()[0]);
+                    DBManager.datacontext.Things.Remove(validvalues.thing2.ToArray()[0]);
                 validvalues.thing2.Clear();
             }
             else
@@ -172,7 +214,7 @@ namespace WindowsFormsApplication1.model.label
             {
                 int temp = validvalues.thing2.Count;
                 for (int i = 0; i < temp; i++ )
-                    DBManager.datacontext.Constthings.Remove(validvalues.thing2.ToArray()[0]);
+                    DBManager.datacontext.Things.Remove(validvalues.thing2.ToArray()[0]);
                
             }
             else 

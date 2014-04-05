@@ -28,44 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "خیابان",
-            "دوربین، آسفالت",
-            "خوب،بد"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
-            "آسفالت",
-            "ندارد",
-            "از 0 تا 3"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
-            "دوربین",
-            "ندارد",
-            "روشن،خاموش"}, -1);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.LabelDataGridView = new System.Windows.Forms.DataGridView();
+            this.LabelName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LabelState = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LabelConstraint = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubLabels = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LabelDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.LabelDataGridView);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.listView2);
             this.groupBox1.Font = new System.Drawing.Font("B Nazanin", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.groupBox1.Location = new System.Drawing.Point(7, 2);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox1.Size = new System.Drawing.Size(758, 505);
             this.groupBox1.TabIndex = 1;
@@ -75,7 +65,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(533, 151);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(76, 29);
             this.textBox2.TabIndex = 32;
@@ -94,7 +84,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(533, 101);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(76, 29);
             this.textBox1.TabIndex = 30;
@@ -120,52 +110,50 @@
             this.label1.TabIndex = 28;
             this.label1.Text = "محدود کردن بر اساس";
             // 
-            // listView2
+            // LabelDataGridView
             // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader5,
-            this.columnHeader2,
-            this.columnHeader1});
-            this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3});
-            this.listView2.Location = new System.Drawing.Point(85, 53);
-            this.listView2.Name = "listView2";
-            this.listView2.RightToLeftLayout = true;
-            this.listView2.Size = new System.Drawing.Size(336, 386);
-            this.listView2.TabIndex = 27;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
+            this.LabelDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.LabelDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.LabelName,
+            this.LabelState,
+            this.LabelConstraint,
+            this.SubLabels});
+            this.LabelDataGridView.Location = new System.Drawing.Point(51, 64);
+            this.LabelDataGridView.Name = "LabelDataGridView";
+            this.LabelDataGridView.Size = new System.Drawing.Size(353, 150);
+            this.LabelDataGridView.TabIndex = 33;
             // 
-            // columnHeader5
+            // LabelName
             // 
-            this.columnHeader5.Text = "نام برچسب";
-            this.columnHeader5.Width = 98;
+            this.LabelName.HeaderText = "نام برچسب";
+            this.LabelName.Name = "LabelName";
             // 
-            // columnHeader2
+            // LabelState
             // 
-            this.columnHeader2.DisplayIndex = 2;
-            this.columnHeader2.Text = "زیربرچسب ها در صورت وجود";
-            this.columnHeader2.Width = 188;
+            this.LabelState.HeaderText = "نوع برچسب";
+            this.LabelState.Name = "LabelState";
             // 
-            // columnHeader1
+            // LabelConstraint
             // 
-            this.columnHeader1.DisplayIndex = 1;
-            this.columnHeader1.Text = "حالت ها";
-            this.columnHeader1.Width = 155;
+            this.LabelConstraint.HeaderText = "محدودیت";
+            this.LabelConstraint.Name = "LabelConstraint";
+            // 
+            // SubLabels
+            // 
+            this.SubLabels.HeaderText = "زیربرچسب‌ها";
+            this.SubLabels.Name = "SubLabels";
             // 
             // BarchasbListViewe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "BarchasbListViewe";
             this.Size = new System.Drawing.Size(766, 510);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LabelDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -178,10 +166,11 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.DataGridView LabelDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LabelName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LabelState;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LabelConstraint;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubLabels;
 
     }
 }

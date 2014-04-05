@@ -28,122 +28,132 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "1",
-            "",
-            "خیابان ازادی",
-            "دوربین",
-            "خراب"}, -1);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.ActionDataGridView = new System.Windows.Forms.DataGridView();
+            this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubAction = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AssetName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LabelName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NewState = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Input = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ActionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RemoveActionTextbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.RemoveButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ActionDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox9);
+            this.groupBox1.Controls.Add(this.ActionDataGridView);
+            this.groupBox1.Controls.Add(this.RemoveActionTextbox);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.listView1);
+            this.groupBox1.Controls.Add(this.RemoveButton);
             this.groupBox1.Font = new System.Drawing.Font("B Nazanin", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.groupBox1.Location = new System.Drawing.Point(9, 3);
+            this.groupBox1.Location = new System.Drawing.Point(7, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(1010, 622);
+            this.groupBox1.Size = new System.Drawing.Size(758, 505);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "حذف عملیات";
             // 
-            // textBox9
+            // ActionDataGridView
             // 
-            this.textBox9.Location = new System.Drawing.Point(736, 36);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(140, 34);
-            this.textBox9.TabIndex = 11;
+            this.ActionDataGridView.AllowUserToAddRows = false;
+            this.ActionDataGridView.AllowUserToDeleteRows = false;
+            this.ActionDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ActionDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Level,
+            this.SubAction,
+            this.AssetName,
+            this.LabelName,
+            this.NewState,
+            this.Input,
+            this.ActionID});
+            this.ActionDataGridView.Location = new System.Drawing.Point(25, 29);
+            this.ActionDataGridView.Name = "ActionDataGridView";
+            this.ActionDataGridView.Size = new System.Drawing.Size(510, 275);
+            this.ActionDataGridView.TabIndex = 12;
+            // 
+            // Level
+            // 
+            this.Level.HeaderText = "مرحله";
+            this.Level.Name = "Level";
+            // 
+            // SubAction
+            // 
+            this.SubAction.HeaderText = "زیر عملیات";
+            this.SubAction.Name = "SubAction";
+            // 
+            // AssetName
+            // 
+            this.AssetName.HeaderText = "دارایی";
+            this.AssetName.Name = "AssetName";
+            // 
+            // LabelName
+            // 
+            this.LabelName.HeaderText = "برچسب";
+            this.LabelName.Name = "LabelName";
+            // 
+            // NewState
+            // 
+            this.NewState.HeaderText = "مقدار جدید";
+            this.NewState.Name = "NewState";
+            // 
+            // Input
+            // 
+            this.Input.HeaderText = "ورودی";
+            this.Input.Name = "Input";
+            // 
+            // ActionID
+            // 
+            this.ActionID.HeaderText = "Column1";
+            this.ActionID.Name = "ActionID";
+            this.ActionID.Visible = false;
+            // 
+            // RemoveActionTextbox
+            // 
+            this.RemoveActionTextbox.Location = new System.Drawing.Point(552, 29);
+            this.RemoveActionTextbox.Name = "RemoveActionTextbox";
+            this.RemoveActionTextbox.Size = new System.Drawing.Size(106, 29);
+            this.RemoveActionTextbox.TabIndex = 11;
+            this.RemoveActionTextbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RemoveActionTextbox_KeyDown);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("B Nazanin", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(930, 39);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(698, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 28);
+            this.label1.Size = new System.Drawing.Size(46, 23);
             this.label1.TabIndex = 10;
             this.label1.Text = "عملیات:";
             // 
-            // button1
+            // RemoveButton
             // 
-            this.button1.Location = new System.Drawing.Point(783, 106);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 32);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "حذف عملیات";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader9,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.listView1.Location = new System.Drawing.Point(71, 36);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4);
-            this.listView1.Name = "listView1";
-            this.listView1.RightToLeftLayout = true;
-            this.listView1.Size = new System.Drawing.Size(544, 497);
-            this.listView1.TabIndex = 8;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "مرحله";
-            this.columnHeader1.Width = 49;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "خرده عملیات";
-            this.columnHeader9.Width = 97;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "دارایی";
-            this.columnHeader2.Width = 93;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "برچسب";
-            this.columnHeader3.Width = 97;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "وضعیت جدید";
-            this.columnHeader4.Width = 114;
+            this.RemoveButton.Location = new System.Drawing.Point(552, 84);
+            this.RemoveButton.Name = "RemoveButton";
+            this.RemoveButton.Size = new System.Drawing.Size(106, 26);
+            this.RemoveButton.TabIndex = 9;
+            this.RemoveButton.Text = "حذف عملیات";
+            this.RemoveButton.UseVisualStyleBackColor = true;
+            this.RemoveButton.Click += new System.EventHandler(this.RemoveButton_Click);
             // 
             // RemoveFunction
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RemoveFunction";
-            this.Size = new System.Drawing.Size(1021, 628);
+            this.Size = new System.Drawing.Size(766, 510);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ActionDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -151,14 +161,16 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox RemoveActionTextbox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Button RemoveButton;
+        private System.Windows.Forms.DataGridView ActionDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Level;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubAction;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AssetName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LabelName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NewState;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Input;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ActionID;
     }
 }

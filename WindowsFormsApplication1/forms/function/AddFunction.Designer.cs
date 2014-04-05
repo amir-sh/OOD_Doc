@@ -398,6 +398,7 @@
             this.ActionNameTextbox.Name = "ActionNameTextbox";
             this.ActionNameTextbox.Size = new System.Drawing.Size(137, 29);
             this.ActionNameTextbox.TabIndex = 18;
+            this.ActionNameTextbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActionNameTextbox_KeyDown);
             // 
             // label2
             // 

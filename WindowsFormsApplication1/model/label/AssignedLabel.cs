@@ -64,7 +64,7 @@ namespace WindowsFormsApplication1.model.label
         {
             return FindRoot().asset;
         }
-        public ICollection<Constthing> GetValidValues() 
+        public ICollection<Thing> GetValidValues() 
         {
             return label.validvalues.thing2;
         }

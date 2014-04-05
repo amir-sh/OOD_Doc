@@ -33,6 +33,7 @@ namespace WindowsFormsApplication1.forms.function
             ActionView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             ActionView.MultiSelect = false;
             curaction = new MyAction();
+            FormLoad.SetAutoComplete(ActionNameTextbox, MyAction.SelectAllAction());
 
         }
 
@@ -181,6 +182,7 @@ namespace WindowsFormsApplication1.forms.function
 
         private void AssignedLabelTreeView_AfterSelect(object sender, TreeViewEventArgs e)
         {
+            //TODO
             curassignedlabel = ((AssignedLabelNode)AssignedLabelTreeView.SelectedNode).label;
             PrepareStateCheckbox(curassignedlabel.label);
         }
@@ -340,6 +342,19 @@ namespace WindowsFormsApplication1.forms.function
             }
             curaction.actions = temp;
             PrepareDataGrid();
+        }
+
+        private void ActionNameTextbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Return) 
+            {
+                var actions = MyAction.GetByName(ActionNameTextbox.Text).ToArray();
+                if (actions.Length > 0)
+                {
+                    curaction = actions[0];
+                    PrepareDataGrid();
+                }
+            }
         }
 
         

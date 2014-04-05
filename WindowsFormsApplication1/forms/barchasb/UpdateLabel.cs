@@ -10,6 +10,7 @@ using WindowsFormsApplication1.forms.Utility.Errors;
 using WindowsFormsApplication1.forms.Utility;
 using WindowsFormsApplication1.model.DB;
 using MyLabel = WindowsFormsApplication1.model.label.Label;
+using WindowsFormsApplication1.model.util;
 
 namespace WindowsFormsApplication1.forms.barchasb
 {
@@ -95,8 +96,8 @@ namespace WindowsFormsApplication1.forms.barchasb
             else
             {
                 checkedListBox1.SetItemChecked(0, true);
-                MinValTexbox.Text = label.validvalues.thing2.ToArray()[0].values;
-                MaxValTextbox.Text = label.validvalues.thing2.ToArray()[1].values;
+                MinValTexbox.Text =((Constthing)label.validvalues.thing2.ToArray()[0]).values;
+                MaxValTextbox.Text =((Constthing) label.validvalues.thing2.ToArray()[1]).values;
                 DefaultValTextbox.Text = label.defaultvalue;
                 if (label.type == MyLabel.DISCRETENUMBER)
                     DiscreteRbutton.Checked = true;

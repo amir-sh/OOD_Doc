@@ -13,20 +13,55 @@ namespace WindowsFormsApplication1.model.util
     {
         
 
-        [NotMapped]
-        public static int NUM_INTEGER=1;
-        [NotMapped]
-        public static int NUM_REAL=2;
-        [NotMapped]
-        public static int STRING=3;
-        [NotMapped]
-        public static int BOOLEAN = 4;
+        
         const string seprator = ",,,";
 
         
         public string values { get; set; }
         public int type { get; set; }
 
+        public override int GetType()
+        {
+
+            return type;
+        }
+        public override string GetThingValue()
+        {
+            return values;
+        }
+        public override bool IsEqual(Thing thing)
+        {
+            //TODO
+            if (this.type != thing.GetType() && this.type + thing.GetType() < 2)
+                return false;
+            else if (this.type == Thing.BOOLEAN)
+                return Boolean.Parse(values) == Boolean.Parse(thing.GetThingValue());
+            else if (this.type == Thing.STRING)
+                return isEqualList(getListofValues(), getListofValues(thing.GetThingValue()));
+            else
+                return Double.Parse(values) == Double.Parse(thing.GetThingValue());
+        }
+        public override string GetStringType()
+        {
+            if (type == STRING)
+                return "مقدار رشته‌ای";
+            if (type == NUM_REAL)
+                return "مقدار اعشاری";
+            if (type == NUM_INTEGER)
+                return "مقدار صحیح";
+            if (type == BOOLEAN)
+                return "مقدار بولین";
+            return "";
+        }
+        public override bool IsLess(Thing thing)
+        {
+            //TODO
+            if (this.type == BOOLEAN)
+                return false;
+            if (this.type == STRING)
+                return false;
+            return Double.Parse(values) < Double.Parse(thing.GetThingValue());
+        }
         public object GetValue() 
         {
             if (type == STRING)
@@ -43,6 +78,19 @@ namespace WindowsFormsApplication1.model.util
             
             else 
                 values += s ;
+        }
+        public bool isEqualList(List<string> data1, List<string> data2) 
+        {
+            //TODO
+            if (data1.Count() != data2.Count())
+                return false;
+            foreach (string item in data1)
+                if (!data2.Contains(item))
+                    return false;
+            foreach (string item in data2)
+                if (!data1.Contains(item))
+                    return false;
+            return true;
         }
         public List<string> GetListofValues(string temp = null)
         {

@@ -14,7 +14,7 @@ using System.Linq;
 
 namespace WindowsFormsApplicatoin1.model.DB
 {
-    public class DatabaseInitializer : DropCreateDatabaseAlways<DatabaseContext> 
+    public class DatabaseInitializer : DropCreateDatabaseIfModelChanges<DatabaseContext> 
     {
         
         protected override void Seed(DatabaseContext context)
@@ -113,7 +113,7 @@ namespace WindowsFormsApplicatoin1.model.DB
             context.Labels.Add(label4);
             context.SaveChanges();
             //assignedlabel.Remove();
-            label1.Remove(true);
+            label1.Remove(true,true);
            
             context.SaveChanges();
         }

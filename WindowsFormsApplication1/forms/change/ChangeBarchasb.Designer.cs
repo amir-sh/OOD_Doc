@@ -29,196 +29,177 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.LabelTreeView = new System.Windows.Forms.TreeView();
+            this.NewValCheckbox = new System.Windows.Forms.CheckedListBox();
+            this.NewValTextbox = new System.Windows.Forms.TextBox();
+            this.CurrentValTextbox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.SelectedLabelTextbox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.SelectLabelCombobox = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.SelectAssetTextbox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.numericUpDown1);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.LabelTreeView);
+            this.groupBox1.Controls.Add(this.NewValCheckbox);
+            this.groupBox1.Controls.Add(this.NewValTextbox);
+            this.groupBox1.Controls.Add(this.CurrentValTextbox);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.SelectedLabelTextbox);
             this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.SelectLabelCombobox);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.SelectAssetTextbox);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.shapeContainer1);
             this.groupBox1.Font = new System.Drawing.Font("B Nazanin", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.groupBox1.Location = new System.Drawing.Point(9, 3);
+            this.groupBox1.Location = new System.Drawing.Point(7, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(1010, 622);
+            this.groupBox1.Size = new System.Drawing.Size(758, 505);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "تغییر وضیت برچسب های دارایی";
             // 
-            // textBox1
+            // LabelTreeView
             // 
-            this.textBox1.Location = new System.Drawing.Point(701, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 34);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "پارک گلایل";
+            this.LabelTreeView.Location = new System.Drawing.Point(172, 48);
+            this.LabelTreeView.Name = "LabelTreeView";
+            this.LabelTreeView.Size = new System.Drawing.Size(173, 227);
+            this.LabelTreeView.TabIndex = 22;
+            this.LabelTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.LabelTreeView_AfterSelect);
             // 
-            // label1
+            // NewValCheckbox
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(857, 59);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 28);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "انتخاب دارایی:";
+            this.NewValCheckbox.FormattingEnabled = true;
+            this.NewValCheckbox.Location = new System.Drawing.Point(497, 307);
+            this.NewValCheckbox.Name = "NewValCheckbox";
+            this.NewValCheckbox.Size = new System.Drawing.Size(104, 76);
+            this.NewValCheckbox.TabIndex = 21;
             // 
-            // label2
+            // NewValTextbox
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(878, 131);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 28);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "برچسب ها:";
+            this.NewValTextbox.Location = new System.Drawing.Point(497, 307);
+            this.NewValTextbox.Name = "NewValTextbox";
+            this.NewValTextbox.Size = new System.Drawing.Size(104, 29);
+            this.NewValTextbox.TabIndex = 20;
             // 
-            // shapeContainer1
+            // CurrentValTextbox
             // 
-            this.shapeContainer1.Location = new System.Drawing.Point(3, 30);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(1004, 589);
-            this.shapeContainer1.TabIndex = 6;
-            this.shapeContainer1.TabStop = false;
-            // 
-            // lineShape1
-            // 
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 147;
-            this.lineShape1.X2 = 876;
-            this.lineShape1.Y1 = 183;
-            this.lineShape1.Y2 = 183;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(489, 572);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 34);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "ثبت تغییرات";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(794, 177);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 28);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "نام برچسب";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(498, 177);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 28);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "برچسب یا دارایی پدر";
+            this.CurrentValTextbox.Location = new System.Drawing.Point(497, 246);
+            this.CurrentValTextbox.Name = "CurrentValTextbox";
+            this.CurrentValTextbox.Size = new System.Drawing.Size(105, 29);
+            this.CurrentValTextbox.TabIndex = 19;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(229, 177);
+            this.label5.Location = new System.Drawing.Point(651, 246);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 28);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "وضعیت";
+            this.label5.Size = new System.Drawing.Size(71, 23);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "وضعیت فعلی:";
             // 
-            // label6
+            // label4
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(829, 229);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 28);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "چمن";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(647, 305);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 23);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "وضعیت جدید:";
             // 
-            // label7
+            // SelectedLabelTextbox
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(788, 274);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(83, 28);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "تیرگی چمن";
+            this.SelectedLabelTextbox.Location = new System.Drawing.Point(497, 177);
+            this.SelectedLabelTextbox.Name = "SelectedLabelTextbox";
+            this.SelectedLabelTextbox.Size = new System.Drawing.Size(105, 29);
+            this.SelectedLabelTextbox.TabIndex = 16;
             // 
-            // label8
+            // label3
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(553, 229);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(79, 28);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "پارک گلایل";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(613, 177);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(107, 23);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "برچسب انتخاب شده:";
             // 
-            // comboBox1
+            // SelectLabelCombobox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.SelectLabelCombobox.FormattingEnabled = true;
+            this.SelectLabelCombobox.Items.AddRange(new object[] {
             "خوب",
             "بد",
             "متوسط"});
-            this.comboBox1.Location = new System.Drawing.Point(159, 223);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 34);
-            this.comboBox1.TabIndex = 14;
+            this.SelectLabelCombobox.Location = new System.Drawing.Point(497, 106);
+            this.SelectLabelCombobox.Margin = new System.Windows.Forms.Padding(2);
+            this.SelectLabelCombobox.Name = "SelectLabelCombobox";
+            this.SelectLabelCombobox.Size = new System.Drawing.Size(105, 29);
+            this.SelectLabelCombobox.TabIndex = 14;
+            this.SelectLabelCombobox.SelectedIndexChanged += new System.EventHandler(this.SelectLabelCombobox_SelectedIndexChanged);
             // 
-            // label9
+            // button1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(590, 274);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 28);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "چمن";
+            this.button1.Location = new System.Drawing.Point(367, 465);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(76, 28);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "ثبت تغییرات";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // numericUpDown1
+            // label2
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(159, 279);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 34);
-            this.numericUpDown1.TabIndex = 16;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(658, 106);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 23);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "برچسب ها:";
+            // 
+            // SelectAssetTextbox
+            // 
+            this.SelectAssetTextbox.Location = new System.Drawing.Point(497, 48);
+            this.SelectAssetTextbox.Margin = new System.Windows.Forms.Padding(2);
+            this.SelectAssetTextbox.Name = "SelectAssetTextbox";
+            this.SelectAssetTextbox.Size = new System.Drawing.Size(105, 29);
+            this.SelectAssetTextbox.TabIndex = 4;
+            this.SelectAssetTextbox.Text = "پارک گلایل";
+            this.SelectAssetTextbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SelectAssetTextbox_KeyDown);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(643, 48);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 23);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "انتخاب دارایی:";
             // 
             // ChangeBarchasb
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ChangeBarchasb";
-            this.Size = new System.Drawing.Size(1021, 628);
+            this.Size = new System.Drawing.Size(766, 510);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -227,19 +208,17 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox SelectAssetTextbox;
         private System.Windows.Forms.Label label1;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox SelectLabelCombobox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox SelectedLabelTextbox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TreeView LabelTreeView;
+        private System.Windows.Forms.CheckedListBox NewValCheckbox;
+        private System.Windows.Forms.TextBox NewValTextbox;
+        private System.Windows.Forms.TextBox CurrentValTextbox;
     }
 }

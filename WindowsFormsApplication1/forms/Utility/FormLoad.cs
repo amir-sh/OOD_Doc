@@ -200,11 +200,11 @@ namespace WindowsFormsApplication1.forms.Utility
                 listBox.Items.Clear();
         }
 
-        public static void SetCheckboxList(CheckedListBox Checkbox, ICollection<Constthing> collection)
+        public static void SetCheckboxList(CheckedListBox Checkbox, ICollection<Thing> collection)
         {
             Checkbox.Items.Clear();
-            foreach (Constthing item in collection)
-                Checkbox.Items.Add(item);
+            foreach (Thing item in collection)
+                Checkbox.Items.Add((Constthing)item);
         }
     }
 }

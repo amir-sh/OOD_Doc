@@ -92,7 +92,7 @@
             this.ActionID});
             this.ActionDataGridView.Location = new System.Drawing.Point(16, 60);
             this.ActionDataGridView.Name = "ActionDataGridView";
-            this.ActionDataGridView.Size = new System.Drawing.Size(510, 150);
+            this.ActionDataGridView.Size = new System.Drawing.Size(510, 263);
             this.ActionDataGridView.TabIndex = 9;
             this.ActionDataGridView.SelectionChanged += new System.EventHandler(this.ActionDataGridView_SelectionChanged);
             // 

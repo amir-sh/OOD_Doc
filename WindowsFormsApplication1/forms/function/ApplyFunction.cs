@@ -146,7 +146,7 @@ namespace WindowsFormsApplication1.forms.function
         private void TriggerValueBox (bool active)
         {
             StatesCheckbox.Enabled = active ;
-            StatesTextbox.Enabled = active ;
+            StatesTextbox.Enabled = !active ;
         }
 
         private void StatesCheckbox_ItemCheck(object sender, ItemCheckEventArgs e)

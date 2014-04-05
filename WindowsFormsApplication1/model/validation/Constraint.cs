@@ -14,13 +14,13 @@ namespace WindowsFormsApplication1.model.validation
         //TODO
         public Constraint()
         {
-            thing1 = new List<Constthing>();
-            thing2 = new List<Constthing>();
+            thing1 = new List<Thing>();
+            thing2 = new List<Thing>();
         }
         [Key]
         public int id { get; set; }
-        public virtual ICollection<Constthing> thing1 { get; set; }
-        public virtual ICollection<Constthing> thing2 { get; set; }
+        public virtual ICollection<Thing> thing1 { get; set; }
+        public virtual ICollection<Thing> thing2 { get; set; }
         public int relation { get; set; }
 
         public bool isValid()
@@ -29,6 +29,7 @@ namespace WindowsFormsApplication1.model.validation
         }
         public void AddToDB() 
         {
+            
             foreach (Constthing item in thing1)
                 item.AddToDB();
             foreach (Constthing item in thing2)

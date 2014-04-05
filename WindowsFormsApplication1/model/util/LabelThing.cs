@@ -13,8 +13,29 @@ namespace WindowsFormsApplication1.model.util
 {
     public class LabelThing : Thing
     {
-        [Key]
-        public int id {get; set;}
-        public virtual AssignedLabel assingnedlabel { get; set; }
+        
+        
+        public virtual AssignedLabel assignedlabel { get; set; }
+        public override string GetThingValue()
+        {
+            return assignedlabel.value.GetThingValue();
+        }
+        public override int GetType()
+        {
+            return assignedlabel.value.GetType();
+        }
+
+        public override bool IsLess(Thing thing)
+        {
+            return this.assignedlabel.value.IsLess(thing);
+        }
+        public override bool IsEqual(Thing thing)
+        {
+            return assignedlabel.value.IsEqual(thing);
+        }
+        public override string GetStringType()
+        {
+            return assignedlabel.value.GetStringType();
+        }
     }
 }

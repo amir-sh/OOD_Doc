@@ -21,12 +21,14 @@ namespace WindowsFormsApplication1.model.asset
             features = new List<FeatureThing>();
             constraints = new List<Constraint>();
             labels = new List<AssignedLabel>();
+            is_enabled = true;
         }
         
         [Key]
         public int id { get; set; }
         public string uId { get; set; }
         public string name { get; set; }
+        public bool is_enabled { get; set; }
         public virtual  ICollection<Asset> parents { get; set; }
         public virtual ICollection<Asset> subAssets { get; set; }
         public virtual ICollection<FeatureThing> features { get; set; }
@@ -101,6 +103,11 @@ namespace WindowsFormsApplication1.model.asset
         {
             curassignedlabel.Remove();
             //labels.Remove(curassignedlabel);
+        }
+
+        public static IQueryable<object> SelectAllAsset()
+        {
+            return DBManager.datacontext.Assets.Where(asset => asset.is_enabled == true);
         }
     }
 }

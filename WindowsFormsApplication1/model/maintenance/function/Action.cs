@@ -66,5 +66,27 @@ namespace WindowsFormsApplication1.model.maintenance.function
         {
             label.value.values = newvalue.values;
         }
+
+        public void Remove()
+        {
+            int temp = actions.Count;
+            for (int i = 0; i < temp; i++)
+                actions.ToArray()[0].Remove();
+            DBManager.datacontext.Constthings.Remove(newvalue);
+            DBManager.datacontext.Constthings.Remove(input);
+            DBManager.datacontext.GeneralActions.Remove(this);
+            
+        }
+        public override bool Equals(object obj)
+        {
+            var action= obj as Action;
+            if (action == null || action.id != id)
+                return false;
+            return true;
+        }
+        public override int GetHashCode()
+        {
+            return id;
+        }
     }
 }

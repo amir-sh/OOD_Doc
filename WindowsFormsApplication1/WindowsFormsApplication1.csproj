@@ -114,6 +114,12 @@
     <Compile Include="forms\barchasb\UpdateLabel.Designer.cs">
       <DependentUpon>UpdateLabel.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\barchasb\Validation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\barchasb\Validation.Designer.cs">
+      <DependentUpon>Validation.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,12 @@
     </Compile>
     <Compile Include="forms\darayi\RemoveDarayi.Designer.cs">
       <DependentUpon>RemoveDarayi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\darayi\SubmitChange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\darayi\SubmitChange.Designer.cs">
+      <DependentUpon>SubmitChange.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\darayi\UpdateDarayiPhase1.cs">
       <SubType>UserControl</SubType>
@@ -350,6 +362,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\barchasb\UpdateLabel.resx">
       <DependentUpon>UpdateLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\barchasb\Validation.resx">
+      <DependentUpon>Validation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
